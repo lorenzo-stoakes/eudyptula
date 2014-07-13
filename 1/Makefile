@@ -1,11 +1,13 @@
+KERNEL_TREE_PATH?=/lib/modules/$(shell uname -r)/build
+
 obj-m += hello.o
 
 all: hello.ko
 
 hello.ko: hello.c
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
+	make -C $(KERNEL_TREE_PATH) M=$(PWD) modules
 
 clean:
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
+	make -C $(KERNEL_TREE_PATH) M=$(PWD) clean
 
 .PHONY: all clean

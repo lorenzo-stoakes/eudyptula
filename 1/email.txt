@@ -1,0 +1,32 @@
+[lorenzo@satan 1]$ ls
+Makefile  hello.c
+[lorenzo@satan 1]$ make
+make -C /lib/modules/3.14.5-1-custom/build
+M=/home/lorenzo/cloud/code/eudyptula/1 modules
+make[1]: Entering directory '/usr/lib/modules/3.14.5-1-custom/build'
+  CC [M]  /home/lorenzo/cloud/code/eudyptula/1/hello.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/lorenzo/cloud/code/eudyptula/1/hello.mod.o
+  LD [M]  /home/lorenzo/cloud/code/eudyptula/1/hello.ko
+make[1]: Leaving directory '/usr/lib/modules/3.14.5-1-custom/build'
+[lorenzo@satan 1]$ sudo insmod hello.ko
+[sudo] password for lorenzo:
+[lorenzo@satan 1]$ dmesg | tail -1
+[  414.848238] Hello World!
+[lorenzo@satan 1]$ lsmod | grep hello
+hello                    763  0
+[lorenzo@satan 1]$ sudo rmmod hello
+[lorenzo@satan 1]$ lsmod | grep hello
+[lorenzo@satan 1]$ KERNEL_TREE_PATH=~/linux make
+make -C /home/lorenzo/linux M=/home/lorenzo/cloud/code/eudyptula/1 modules
+make[1]: Entering directory '/home/lorenzo/linux'
+  CC [M]  /home/lorenzo/cloud/code/eudyptula/1/hello.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/lorenzo/cloud/code/eudyptula/1/hello.mod.o
+  LD [M]  /home/lorenzo/cloud/code/eudyptula/1/hello.ko
+make[1]: Leaving directory '/home/lorenzo/linux'
+[lorenzo@satan 1]$ ls hello.ko
+hello.ko
+[lorenzo@satan 1]$

@@ -1,0 +1,65 @@
+[~/uml]$ ./linux ubda=Debian-Wheezy-AMD64-root_fs rw mem=256m
+Core dump limits :
+	soft - 0
+	hard - NONE
+Checking that ptrace can change system call numbers...OK
+Checking syscall emulation patch for ptrace...OK
+Checking advanced syscall emulation patch for ptrace...OK
+Checking environment variables for a tempdir...none found
+Checking if /dev/shm is on tmpfs...OK
+Checking PROT_EXEC mmap in /dev/shm...OK
+Checking for the skas3 patch in the host:
+  - /proc/mm...not found: No such file or directory
+  - PTRACE_FAULTINFO...not found
+  - PTRACE_LDT...not found
+UML running in SKAS0 mode
+Adding 31653888 bytes to physical memory to account for exec-shield gap
+Initializing cgroup subsys cpuset
+Initializing cgroup subsys cpu
+Initializing cgroup subsys cpuacct
+Linux version 3.16.0-rc4-00020-g448bfad (lorenzo@satan) (gcc version 4.9.0 20140604 (prerelease) (GCC) ) #3 Tue Jul 8 16:43:46 BST 2014
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 72262
+Kernel command line: ubda=Debian-Wheezy-AMD64-root_fs rw mem=256m root=98:0
+PID hash table entries: 2048 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 65536 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 32768 (order: 6, 262144 bytes)
+Memory: 249164K/293056K available (2407K kernel code, 636K rwdata, 740K rodata, 113K init, 159K bss, 43892K reserved)
+NR_IRQS:15
+Calibrating delay loop... 6109.59 BogoMIPS (lpj=30547968)
+
+<snip>
+
+changeme login: root
+Last login: Tue Jul  8 15:48:19 UTC 2014 on tty0
+Linux changeme 3.16.0-rc4-00020-g448bfad #3 Tue Jul 8 16:43:46 BST 2014 x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+root@changeme:~# uname -r
+3.16.0-rc4-00020-g448bfad
+root@changeme:~# halt
+INIT: Switching to runlevel: 0
+INIT: Sending processes the TERM signal
+
+Broadcast message from root@changeme (tty0) (Tue Jul  8 15:51:06 2014):
+
+The system is going down for system halt NOW!
+[info] Using makefile-style concurrent boot in runlevel 0.
+[ ok ] Asking all remaining processes to terminate...done.
+[ ok ] All processes ended within 1 seconds...done.
+[ ok ] Stopping enhanced syslogd: rsyslogd.
+[info] Saving the system clock.
+hwclock: Cannot access the Hardware Clock via any known method.
+hwclock: Use the --debug option to see the details of our search for an access method.
+[ ok ] Deconfiguring network interfaces...done.
+[ ok ] Unmounting temporary filesystems...done.
+[ ok ] Deactivating swap...done.
+EXT4-fs (ubda): re-mounted. Opts: (null)
+[info] Will now halt.
+reboot: System halted
+
+[~/uml]$

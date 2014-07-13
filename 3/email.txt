@@ -1,0 +1,50 @@
+Append '-eudyptula' to the version line to make it clear that we are running a
+kernel specifically designed to fulfill the Eudyptula challenge.
+
+Applies to kernel version 3.16.0-rc4.
+
+Example output:-
+
+[~/uml]$ ./linux ubda=Debian-Wheezy-AMD64-root_fs-cow rw mem=1g
+
+<snip>
+
+Linux version 3.16.0-rc4-eudyptula-00039-g191d385-dirty (lorenzo@satan) (gcc
+version 4.9.0 20140604 (prerelease) (GCC) ) #2 Wed Jul 9 19:25:14 BST 2014
+
+<snip>
+
+goblin login: root
+Last login: Wed Jul  9 18:24:30 UTC 2014 on tty0
+
+Linux goblin 3.16.0-rc4-eudyptula-00039-g191d385-dirty #2 Wed Jul 9 19:25:14 BST
+2014 x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+root@goblin:~# uname -r
+3.16.0-rc4-eudyptula-00039-g191d385-dirty
+
+Signed-off-by: Lorenzo Stoakes <lstoakes@gmail.com>
+CC: Michal Marek <mmarek@suse.cz>; linux-kernel@vger.kernel.org
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index 4d75b4b..51b9d0a 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,7 +1,7 @@
+ VERSION = 3
+ PATCHLEVEL = 16
+ SUBLEVEL = 0
+-EXTRAVERSION = -rc4
++EXTRAVERSION = -rc4-eudyptula
+ NAME = Shuffling Zombie Juror
+
+ # *DOCUMENTATION*

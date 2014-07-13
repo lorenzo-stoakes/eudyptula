@@ -1,0 +1,4 @@
+Fixed code enclosed. coding_style.c updated.
+
+Actually ran checkpatch.pl in a kernel tree... I also reverted to using the
+curly braces as checkpatch.pl is ok with that, can fix if that's not ok.
