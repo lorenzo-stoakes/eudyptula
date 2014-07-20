@@ -20,15 +20,21 @@ static ssize_t hello_read(struct file *file, char __user *out,
 static ssize_t hello_write(struct file *file, const char __user *in,
 						size_t size, loff_t *off)
 {
-	/* Excluding newline. */
-	size_t hello_chars_len = hello_len - 1;
+	size_t hello_chars_len = hello_len - 1; /* Excluding newline. */
+	char buf[hello_chars_len];
 
-	if (*off != 0 || size < hello_chars_len ||
-	   strncmp(in, hello_id, hello_chars_len))
-		return -EINVAL;
+	if (size < hello_chars_len)
+		goto invalid;
 
+	simple_write_to_buffer(buf, hello_chars_len, off, in, size);
+	if (strncmp(buf, hello_id, hello_chars_len))
+		goto invalid;
+
+	/* We're a sink. */
 	*off = size;
 	return size;
+ invalid:
+	return -EINVAL;
 }
 
 static const struct file_operations hello_fops = {
