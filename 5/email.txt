@@ -1,0 +1,19 @@
+[~/cloud/code/eudyptula/5]$ sudo cp hello.ko /lib/modules/3.14.5-1-custom/extramodules/
+[~/cloud/code/eudyptula/5]$ sudo depmod
+[~/cloud/code/eudyptula/5]$ lsmod | grep -i hello
+[~/cloud/code/eudyptula/5]$ lsusb | grep -i keyboard
+Bus 002 Device 005: ID 05ac:0263 Apple, Inc. Apple Internal Keyboard / Trackpad (MacBook Retina)
+[~/cloud/code/eudyptula/5]$ dmesg -T | tail -3
+[Mon Jul 14 08:45:54 2014] PM: resume of devices complete after 307.758 msecs
+[Mon Jul 14 08:45:54 2014] PM: Finishing wakeup.
+[Mon Jul 14 08:45:54 2014] Restarting tasks ... done.
+[~/cloud/code/eudyptula/5]$ dmesg -T | tail -3
+[Mon Jul 14 08:59:05 2014] input: Microsoft Comfort Curve Keyboard 2000 as /devices/pci0000:00/0000:00:14.0/usb3/3-1/3-1:1.1/0003:045E:00DD.0006/input/input15
+[Mon Jul 14 08:59:05 2014] hid-generic 0003:045E:00DD.0006: input,hidraw3: USB HID v1.11 Device [Microsoft Comfort Curve Keyboard 2000] on usb-0000:00:14.0-1/input1
+[Mon Jul 14 08:59:05 2014] Hello World!
+[~/cloud/code/eudyptula/5]$ lsmod | grep -i hello
+hello                   1019  0
+[~/cloud/code/eudyptula/5]$ lsusb | grep -i keyboard
+Bus 002 Device 005: ID 05ac:0263 Apple, Inc. Apple Internal Keyboard / Trackpad (MacBook Retina)
+Bus 003 Device 003: ID 045e:00dd Microsoft Corp. Comfort Curve Keyboard 2000 V1.0
+[~/cloud/code/eudyptula/5]$ sudo rmmod hello

@@ -1,0 +1,24 @@
+[~/cloud/code/eudyptula/6]$ lsmod | grep -i hello
+[~/cloud/code/eudyptula/6]$ ls -l /dev/eudyptula
+ls: cannot access /dev/eudyptula: No such file or directory
+[~/cloud/code/eudyptula/6]$ sudo insmod hello.ko
+[~/cloud/code/eudyptula/6]$ lsmod | grep -i hello
+hello                   1410  0
+[~/cloud/code/eudyptula/6]$ ls -l /dev/eudyptula
+crw------- 1 root root 10, 55 Jul 19 23:24 /dev/eudyptula
+[~/cloud/code/eudyptula/6]$ sudo chmod 0666 /dev/eudyptula
+[~/cloud/code/eudyptula/6]$ ls -l /dev/eudyptula
+crw-rw-rw- 1 root root 10, 55 Jul 19 23:31 /dev/eudyptula
+[~/cloud/code/eudyptula/6]$ cat /dev/eudyptula
+f8cdc7cef553
+[~/cloud/code/eudyptula/6]$ cat /dev/eudyptula | wc -c
+13
+[~/cloud/code/eudyptula/6]$ echo foo > /dev/eudyptula
+echo: write error: invalid argument
+[~/cloud/code/eudyptula/6]$ echo bar > /dev/eudyptula
+echo: write error: invalid argument
+[~/cloud/code/eudyptula/6]$ echo f8cdc7cef552 > /dev/eudyptula
+echo: write error: invalid argument
+[~/cloud/code/eudyptula/6]$ echo f8cdc7cef553 > /dev/eudyptula
+[~/cloud/code/eudyptula/6]$ echo -n f8cdc7cef553 > /dev/eudyptula
+[~/cloud/code/eudyptula/6]$
