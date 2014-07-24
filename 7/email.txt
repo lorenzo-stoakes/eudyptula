@@ -1,0 +1,119 @@
+[lorenzo@satan linux]$ git describe
+v3.16-rc6
+[lorenzo@satan linux]$ git checkout -b next v3.16-rc5
+Switched to a new branch 'next'
+[lorenzo@satan linux]$ wget https://www.kernel.org/pub/linux/kernel/next/patch-v3.16-rc5-next-20140721.xz
+Resolving www.kernel.org (www.kernel.org)... 199.204.44.194, 198.145.20.140, 149.20.4.69,
+ ...
+Connecting to www.kernel.org (www.kernel.org)|199.204.44.194|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 5277700 (5.0M) [application/x-xz]
+Saving to: ‘patch-v3.16-rc5-next-20140721.xz’
+
+100%[===============================================>] 5,277,700   2.70MB/s   in 1.9s
+
+2014-07-21 18:41:50 (2.70 MB/s) - ‘patch-v3.16-rc5-next-20140721.xz’ saved [5277700/52777
+00]
+
+[lorenzo@satan linux]$ unxz patch-v3.16-rc5-next-20140721.xz
+[lorenzo@satan linux]$ git apply patch-v3.16-rc5-next-20140721
+patch-v3.16-rc5-next-20140721:7965: trailing whitespace.
+The w1_ds2406 driver allows connected devices to be switched on and off.
+patch-v3.16-rc5-next-20140721:35810: trailing whitespace.
+                                MX6QDL_PAD_EIM_DA15__GPIO3_IO15         0x80000000      /
+* BT_HOST_WAKE */
+patch-v3.16-rc5-next-20140721:236615: trailing whitespace.
+/*
+patch-v3.16-rc5-next-20140721:488110: space before tab in indent.
+        depends on USB_GADGET && (ARCH_SHMOBILE || (ARM && COMPILE_TEST))
+patch-v3.16-rc5-next-20140721:584957: trailing whitespace.
+                                m++; // Google translated: Avoid been back and forth in t
+he two level
+warning: squelched 63 whitespace errors
+warning: 68 lines add whitespace errors.
+[lorenzo@satan linux]$ git add .
+[lorenzo@satan linux]$ git commit -m 'v3.16-rc5-next'
+[next d7fb44c] v3.16-rc5-next
+ 6641 files changed, 1587771 insertions(+), 462197 deletions(-)
+<snip>
+[lorenzo@satan linux]$ git status
+On branch next
+nothing to commit, working directory clean
+[lorenzo@satan linux]$ make mrproper
+[lorenzo@satan linux]$ make defconfig
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/kconfig/conf.o
+  SHIPPED scripts/kconfig/zconf.tab.c
+  SHIPPED scripts/kconfig/zconf.lex.c
+  SHIPPED scripts/kconfig/zconf.hash.c
+  HOSTCC  scripts/kconfig/zconf.tab.o
+In file included from scripts/kconfig/zconf.tab.c:2537:0:
+scripts/kconfig/menu.c: In function ‘get_symbol_str’:
+scripts/kconfig/menu.c:590:18: warning: ‘jump’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     jump->offset = strlen(r->s);
+                  ^
+scripts/kconfig/menu.c:551:19: note: ‘jump’ was declared here
+  struct jump_key *jump;
+                   ^
+  HOSTLD  scripts/kconfig/conf
+*** Default configuration is based on 'x86_64_defconfig'
+#
+# configuration written to .config
+#
+[lorenzo@satan linux]$ make -j8
+scripts/kconfig/conf --silentoldconfig Kconfig
+  SYSTBL  arch/x86/syscalls/../include/generated/asm/syscalls_32.h
+  SYSHDR  arch/x86/syscalls/../include/generated/asm/unistd_32_ia32.h
+  SYSTBL  arch/x86/syscalls/../include/generated/asm/syscalls_64.h
+  SYSHDR  arch/x86/syscalls/../include/generated/asm/unistd_64_x32.h
+  SYSHDR  arch/x86/syscalls/../include/generated/uapi/asm/unistd_32.h
+  SYSHDR  arch/x86/syscalls/../include/generated/uapi/asm/unistd_64.h
+  SYSHDR  arch/x86/syscalls/../include/generated/uapi/asm/unistd_x32.h
+  HOSTCC  scripts/basic/bin2c
+  CHK     include/config/kernel.release
+<snip>
+  ZOFFSET arch/x86/boot/zoffset.h
+  OBJCOPY arch/x86/boot/vmlinux.bin
+  AS      arch/x86/boot/header.o
+  LD      arch/x86/boot/setup.elf
+  OBJCOPY arch/x86/boot/setup.bin
+  BUILD   arch/x86/boot/bzImage
+Setup is 15692 bytes (padded to 15872 bytes).
+System is 5640 kB
+CRC 58d12ebd
+Kernel: arch/x86/boot/bzImage is ready  (#1)
+[lorenzo@satan linux]$ cp arch/x86/boot/bzImage ../qemu-linux
+[lorenzo@satan linux]$ cd ../qemu-linux
+[lorenzo@satan qemu-linux]$ qemu-system-x86_64 -curses -kernel bzImage -hda Debian-Wheezy-AMD64-root_fs.img -append root=/dev/sda
+IOS (version 1.7.5-20140617_173321-var-lib-archbuild-testing-x86_64-tobias)
+
+
+iPXE (http://ipxe.org) 00:03.0 C980 PCI2.10 PnP PMM+07F96170+07EF6170 C980
+
+
+Booting from ROM...
+early console in decompress_kernel
+
+Decompressing Linux... Parsing ELF...
+<snip>
+   Debian GNU/Linux 7 changeme tty0
+
+        changeme login: root
+        Last login: Tue Jul  8 15:50:22 UTC 2014 on tty0
+        Linux changeme 3.16.0-rc5-next-20140721+ #1 SMP Mon Jul 21 19:12:59 BST 2014 x86
+        _64
+
+        The programs included with the Debian GNU/Linux system are free software;
+        the exact distribution terms for each program are described in the
+        individual files in /usr/share/doc/*/copyright.
+
+        Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+        permitted by applicable law.
+        root@changeme:~# uname -a
+        Linux changeme 3.16.0-rc5-next-20140721+ #1 SMP Mon Jul 21 19:12:59 BST 2014 x86
+        _64 GNU/Linux
+		root@changeme:~# halt
+
+        Broadcast message from root@changeme (tty0) (Mon Jul 21 18:48:40 2014):
+<snip>
+[lorenzo@satan qemu-linux]$
