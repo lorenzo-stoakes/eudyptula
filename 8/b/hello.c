@@ -59,8 +59,8 @@ hello_init(void)
 	if (IS_ERR_OR_NULL(ptr))
 		goto error;
 
-	ptr = debugfs_create_u32("jiffies", 0444, eudyptula_dir,
-				 (u32 *)&jiffies);
+	ptr = debugfs_create_size_t("jiffies", 0444, eudyptula_dir,
+				    (size_t *)&jiffies);
 	if (IS_ERR_OR_NULL(ptr))
 		goto error;
 
