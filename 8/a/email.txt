@@ -1,0 +1,41 @@
+[~/cloud/code/eudyptula/8/c]$ ls /sys/kernel/debug/eudyptula
+ls: cannot access /sys/kernel/debug/eudyptula: No such file or directory
+[~/cloud/code/eudyptula/8/c]$ sudo insmod hello.ko
+[sudo] password for lorenzo:
+[~/cloud/code/eudyptula/8/c]$ ls /sys/kernel/debug/eudyptula
+foo  id  jiffies
+[~/cloud/code/eudyptula/8/c]$ cat /sys/kernel/debug/eudyptula/id
+f8cdc7cef553
+[~/cloud/code/eudyptula/8/c]$ echo foo > /sys/kernel/debug/eudyptula/id
+echo: write error: invalid argument
+[~/cloud/code/eudyptula/8/c]$ echo f8cdc7cef552 > /sys/kernel/debug/eudyptula/id
+echo: write error: invalid argument
+[~/cloud/code/eudyptula/8/c]$ echo f8cdc7cef553 > /sys/kernel/debug/eudyptula/id
+[~/cloud/code/eudyptula/8/c]$ echo f8cdc7cef553x > /sys/kernel/debug/eudyptula/id
+[~/cloud/code/eudyptula/8/c]$ cat /sys/kernel/debug/eudyptula/jiffies
+4420624054
+[~/cloud/code/eudyptula/8/c]$ cat /sys/kernel/debug/eudyptula/jiffies
+4420625358
+[~/cloud/code/eudyptula/8/c]$ cat /sys/kernel/debug/eudyptula/jiffies
+4420627702
+[~/cloud/code/eudyptula/8/c]$ echo foo > /sys/kernel/debug/eudyptula/foo
+zsh: permission denied: /sys/kernel/debug/eudyptula/foo
+[~/cloud/code/eudyptula/8/c]$ cat /sys/kernel/debug/eudyptula/foo
+[~/cloud/code/eudyptula/8/c]$ echo foo | sudo tee /sys/kernel/debug/eudyptula/foo
+[sudo] password for lorenzo:
+foo
+[~/cloud/code/eudyptula/8/c]$ cat /sys/kernel/debug/eudyptula/foo
+foo
+[~/cloud/code/eudyptula/8/c]$ getconf PAGE_SIZE
+4096
+[~/cloud/code/eudyptula/8/c]$ sudo dd bs=1 if=/dev/urandom count=4096 of=/sys/kernel/debu
+g/eudyptula/foo
+4096+0 records in
+4096+0 records out
+4096 bytes (4.1 kB) copied, 0.0101436 s, 404 kB/s
+[~/cloud/code/eudyptula/8/c]$ sudo dd bs=1 if=/dev/urandom count=4097 of=/sys/kernel/debu
+g/eudyptula/foo
+dd: error writing ‘/sys/kernel/debug/eudyptula/foo’: No space left on device
+4097+0 records in
+4096+0 records out
+4096 bytes (4.1 kB) copied, 0.0110557 s, 370 kB/s

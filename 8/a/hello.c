@@ -54,8 +54,7 @@ hello_init(void)
 		goto error_dir;
 	}
 
-	ptr = debugfs_create_file("id", 0666, eudyptula_dir, NULL,
-				  &id_fops);
+	ptr = debugfs_create_file("id", 0666, eudyptula_dir, NULL, &id_fops);
 	if (IS_ERR_OR_NULL(ptr))
 		goto error;
 
