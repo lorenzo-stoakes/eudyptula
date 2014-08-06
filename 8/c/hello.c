@@ -9,7 +9,7 @@ MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Lorenzo Stoakes <lstoakes@gmail.com>");
 MODULE_DESCRIPTION("A test module that interfaces with debugfs.");
 
-DEFINE_MUTEX(foo_lock);
+static DEFINE_MUTEX(foo_lock);
 
 static struct dentry *eudyptula_dir;
 static unsigned long foo_page;
@@ -100,15 +100,15 @@ hello_init(void)
 	if (IS_ERR_OR_NULL(ptr))
 		goto error;
 
-	ptr = debugfs_create_file("foo", 0644, eudyptula_dir, NULL, &foo_fops);
-	if (IS_ERR_OR_NULL(ptr))
-		goto error;
-
 	foo_page = get_zeroed_page(GFP_KERNEL);
 	if (!foo_page) {
 		ptr = NULL;
 		goto error;
 	}
+
+	ptr = debugfs_create_file("foo", 0644, eudyptula_dir, NULL, &foo_fops);
+	if (IS_ERR_OR_NULL(ptr))
+		goto error;
 
 	return 0;
 
