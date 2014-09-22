@@ -1,0 +1,53 @@
+[~/cloud/code/eudyptula/9]$ ls /sys/kernel
+boot_params  fscaps              kexec_crash_size  notes          security       vmcoreinfo
+config       iommu_groups        kexec_loaded      profiling      slab
+debug        kexec_crash_loaded  mm                rcu_expedited  uevent_seqnum
+[~/cloud/code/eudyptula/9]$ sudo insmod hello.ko
+[~/cloud/code/eudyptula/9]$ ls /sys/kernel
+boot_params  eudyptula     kexec_crash_loaded  mm         rcu_expedited  uevent_seqnum
+config       fscaps        kexec_crash_size    notes      security       vmcoreinfo
+debug        iommu_groups  kexec_loaded        profiling  slab
+[~/cloud/code/eudyptula/9]$ ls -l /sys/kernel/eudyptula
+total 0
+-rw-r--r-- 1 root root 4096 Sep 23 00:01 foo
+-rw-r--r-- 1 root root 4096 Sep 23 00:01 id
+-r--r--r-- 1 root root 4096 Sep 23 00:01 jiffies
+[~/cloud/code/eudyptula/9]$ cat /sys/kernel/eudyptula/id
+f8cdc7cef553
+[~/cloud/code/eudyptula/9]$ echo foo > /sys/kernel/eudyptula/id
+zsh: permission denied: /sys/kernel/eudyptula/id
+[~/cloud/code/eudyptula/9]$ echo foo | sudo tee /sys/kernel/eudyptula/id
+foo
+tee: /sys/kernel/eudyptula/id: Invalid argument
+[~/cloud/code/eudyptula/9]$ echo f8cdc7cef553 | sudo tee /sys/kernel/eudyptula/id
+f8cdc7cef553
+[~/cloud/code/eudyptula/9]$ echo e8cdc7cef553 | sudo tee /sys/kernel/eudyptula/id
+e8cdc7cef553
+tee: /sys/kernel/eudyptula/id: Invalid argument
+[~/cloud/code/eudyptula/9]$ cat /proc/timer_list | grep -i ^jiffies | uniq && cat /sys/kernel/eudyptula/jiffies
+jiffies: 4297007539
+4297007542
+[~/cloud/code/eudyptula/9]$ echo foo | sudo tee /sys/kernel/eudyptula/foo
+[sudo] password for lorenzo:
+foo
+[~/cloud/code/eudyptula/9]$ cat /sys/kernel/eudyptula/foo
+foo
+[~/cloud/code/eudyptula/9]$ echo Ref: http://stackoverflow.com/a/5349842 for the printf trick.
+Ref: http://stackoverflow.com/a/5349842 for the printf trick.
+[~/cloud/code/eudyptula/9]$ sudo bash -c "printf 'x%.0s' {1..4094} > /sys/kernel/eudyptula/foo"
+[~/cloud/code/eudyptula/9]$ cat /sys/kernel/eudyptula/foo | wc -c
+4094
+[~/cloud/code/eudyptula/9]$ sudo bash -c "printf 'x%.0s' {1..4095} > /sys/kernel/eudyptula/foo"
+[~/cloud/code/eudyptula/9]$ cat /sys/kernel/eudyptula/foo | wc -c
+4095
+[~/cloud/code/eudyptula/9]$ sudo bash -c "printf 'x%.0s' {1..4096} > /sys/kernel/eudyptula/foo"
+[~/cloud/code/eudyptula/9]$ cat /sys/kernel/eudyptula/foo | wc -c
+4095
+[~/cloud/code/eudyptula/9]$ echo 4095 since the 4096th char is null.
+4095 since the 4096th char is null.
+[~/cloud/code/eudyptula/9]$ sudo rmmod hello
+[~/cloud/code/eudyptula/9]$ ls /sys/kernel
+boot_params  iommu_groups        mm             security
+config       kexec_crash_loaded  notes          slab
+debug        kexec_crash_size    profiling      uevent_seqnum
+fscaps       kexec_loaded        rcu_expedited  vmcoreinfo
