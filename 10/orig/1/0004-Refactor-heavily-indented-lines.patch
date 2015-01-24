@@ -1,0 +1,61 @@
+From: Lorenzo Stoakes <lstoakes@gmail.com>
+Date: Tue, 30 Dec 2014 19:45:04 +0000
+Subject: [PATCH 4/4] staging: rtl8192u: Refactor heavy nesting
+
+This patch fixes warnings raised by checkpatch.pl relating to heavily indented
+lines in r8192U_dm.c. It refactors a couple of else if cases to achieve the same
+outcome indented by one fewer tab. It additionally updateds comment positioning
+to be consistent across these cases.
+
+Signed-off-by: Lorenzo Stoakes <lstoakes@gmail.com>
+---
+ drivers/staging/rtl8192u/r8192U_dm.c | 27 ++++++++++++---------------
+ 1 file changed, 12 insertions(+), 15 deletions(-)
+
+diff --git a/drivers/staging/rtl8192u/r8192U_dm.c b/drivers/staging/rtl8192u/r8192U_dm.c
+index 0839ea7..72d1f47 100644
+--- a/drivers/staging/rtl8192u/r8192U_dm.c
++++ b/drivers/staging/rtl8192u/r8192U_dm.c
+@@ -2585,28 +2585,25 @@ static void dm_rxpath_sel_byrssi(struct net_device *dev)
+ 						cck_rx_ver2_sec_index = cck_rx_ver2_max_index;
+ 						tmp_cck_max_pwdb = cur_cck_pwdb;
+ 						cck_rx_ver2_max_index = i;
+-					} else if (cur_cck_pwdb == tmp_cck_max_pwdb) { /* let sec and min point to the different index */
++					} else if (cur_cck_pwdb == tmp_cck_max_pwdb) {
++						/* let sec and min point to the different index */
+ 						tmp_cck_sec_pwdb = cur_cck_pwdb;
+ 						cck_rx_ver2_sec_index = i;
+ 					} else if ((cur_cck_pwdb < tmp_cck_max_pwdb) && (cur_cck_pwdb > tmp_cck_sec_pwdb)) {
+ 						tmp_cck_sec_pwdb = cur_cck_pwdb;
+ 						cck_rx_ver2_sec_index = i;
+-					} else if (cur_cck_pwdb == tmp_cck_sec_pwdb) {
+-						if (tmp_cck_sec_pwdb == tmp_cck_min_pwdb) { /* let sec and min point to the different index */
+-							tmp_cck_sec_pwdb = cur_cck_pwdb;
+-							cck_rx_ver2_sec_index = i;
+-						} else {
+-							/*  This case we don't need to set any index */
+-						}
++					} else if (cur_cck_pwdb == tmp_cck_sec_pwdb && tmp_cck_sec_pwdb == tmp_cck_min_pwdb) {
++						/* let sec and min point to the different index */
++						tmp_cck_sec_pwdb = cur_cck_pwdb;
++						cck_rx_ver2_sec_index = i;
++						/* otherwise we don't need to set any index */
+ 					} else if ((cur_cck_pwdb < tmp_cck_sec_pwdb) && (cur_cck_pwdb > tmp_cck_min_pwdb)) {
+ 						/*  This case we don't need to set any index */
+-					} else if (cur_cck_pwdb == tmp_cck_min_pwdb) {
+-						if (tmp_cck_sec_pwdb == tmp_cck_min_pwdb) { /*  let sec and min point to the different index */
+-							tmp_cck_min_pwdb = cur_cck_pwdb;
+-							cck_rx_ver2_min_index = i;
+-						} else {
+-							/*  This case we don't need to set any index */
+-						}
++					} else if (cur_cck_pwdb == tmp_cck_min_pwdb && tmp_cck_sec_pwdb == tmp_cck_min_pwdb) {
++						/*  let sec and min point to the different index */
++						tmp_cck_min_pwdb = cur_cck_pwdb;
++						cck_rx_ver2_min_index = i;
++						/* otherwise we don't need to set any index */
+ 					} else if (cur_cck_pwdb < tmp_cck_min_pwdb) {
+ 						tmp_cck_min_pwdb = cur_cck_pwdb;
+ 						cck_rx_ver2_min_index = i;
+--
+2.2.1
