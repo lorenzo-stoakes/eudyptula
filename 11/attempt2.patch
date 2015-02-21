@@ -1,0 +1,84 @@
+From: Lorenzo Stoakes <lstoakes@gmail.com>
+Date: Thu, 12 Feb 2015 22:57:33 +0000
+Subject: [f8cdc7cef553] [PATCH] Task 11: Input: wacom - add eudyptula id file to sysfs
+
+This patch adds an id file to the wacom driver's sysfs device directory which,
+when read, outputs my Eudyptula ID (f8cdc7cef553) and, when written, raises an
+invalid argument error unless the string written to it exactly matches this ID.
+
+Signed-off-by: Lorenzo Stoakes <lstoakes@gmail.com>
+---
+ drivers/hid/wacom_sys.c | 44 ++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 44 insertions(+)
+
+diff --git a/drivers/hid/wacom_sys.c b/drivers/hid/wacom_sys.c
+index f0568a7..30c3bd6 100644
+--- a/drivers/hid/wacom_sys.c
++++ b/drivers/hid/wacom_sys.c
+@@ -27,6 +27,39 @@
+ #define DEV_ATTR_RW_PERM (S_IRUGO | S_IWUSR | S_IWGRP)
+ #define DEV_ATTR_WO_PERM (S_IWUSR | S_IWGRP)
+
++/* Eudyptula ID Functionality */
++
++static const char hello_id[] = "f8cdc7cef553";
++static const size_t hello_id_len = 12;
++
++static ssize_t
++id_show(struct kobject *kobj, struct kobj_attribute *attr, char *buf)
++{
++	return sprintf(buf, "%s\n", hello_id);
++}
++
++static ssize_t
++id_store(struct kobject *kobj, struct kobj_attribute *attr, const char *buf,
++	 size_t count)
++{
++	if (count < hello_id_len || strncmp(buf, hello_id, hello_id_len))
++		return -EINVAL;
++
++	return count;
++}
++
++static struct kobj_attribute id_attr = __ATTR(id, 0644, id_show, id_store);
++
++static struct attribute *id_attrs[] = {
++	&id_attr.attr,
++	NULL
++};
++
++static struct attribute_group id_attr_group = {
++	.attrs = id_attrs
++};
++
++
+ static int wacom_get_report(struct hid_device *hdev, u8 type, u8 *buf,
+ 			    size_t size, unsigned int retries)
+ {
+@@ -1518,6 +1551,15 @@ static int wacom_probe(struct hid_device *hdev,
+ 			wacom_wac->shared->touch_input = wacom_wac->input;
+ 	}
+
++	/* Eudyptula demands an ID! */
++	error = sysfs_create_group(&wacom->hdev->dev.kobj, &id_attr_group);
++
++	if (error) {
++		hid_err(wacom->hdev,
++			"cannot create sysfs group err: %d\n", error);
++		return error;
++	}
++
+ 	return 0;
+
+ fail_hw_start:
+@@ -1552,6 +1594,8 @@ static void wacom_remove(struct hid_device *hdev)
+ 	wacom_destroy_battery(wacom);
+ 	wacom_remove_shared_data(&wacom->wacom_wac);
+
++	sysfs_remove_group(&wacom->hdev->dev.kobj, &id_attr_group);
++
+ 	hid_set_drvdata(hdev, NULL);
+ 	kfree(wacom);
+ }
+--
+2.3.0
