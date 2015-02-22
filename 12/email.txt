@@ -1,0 +1,27 @@
+[~/cloud/code/eudyptula/12]$ make
+make -C /lib/modules/3.18.6-1-ARCH/build M=/home/lorenzo/cloud/code/eudyptula/12 modules
+make[1]: Entering directory '/usr/lib/modules/3.18.6-1-ARCH/build'
+  CC [M]  /home/lorenzo/cloud/code/eudyptula/12/list_test.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  LD [M]  /home/lorenzo/cloud/code/eudyptula/12/list_test.ko
+make[1]: Leaving directory '/usr/lib/modules/3.18.6-1-ARCH/build'
+[~/cloud/code/eudyptula/12]$ sudo insmod list_test.ko
+[sudo] password for lorenzo:
+[~/cloud/code/eudyptula/12]$ journalctl -xn
+-- Logs begin at Fri 2015-02-06 14:24:34 GMT, end at Sat 2015-02-21 19:10:53 GMT. --
+Feb 21 19:10:53 lucifer kernel: list_test: 1: found: Lorenzo
+Feb 21 19:10:53 lucifer kernel: list_test: 1337: found: Little
+Feb 21 19:10:53 lucifer kernel: list_test: 907: found: Linus
+Feb 21 19:10:53 lucifer kernel: list_test: 123: not found
+Feb 21 19:10:53 lucifer kernel: list_test: 456: not found
+Feb 21 19:10:53 lucifer kernel: list_test: 1: not found
+Feb 21 19:10:53 lucifer kernel: list_test: 1337: not found
+Feb 21 19:10:53 lucifer kernel: list_test: 907: not found
+Feb 21 19:10:53 lucifer kernel: list_test: 123: not found
+Feb 21 19:10:53 lucifer kernel: list_test: 456: not found
+[~/cloud/code/eudyptula/12]$ lsmod | grep list_test
+list_test              12521  0
+[~/cloud/code/eudyptula/12]$ sudo rmmod list_test
+[~/cloud/code/eudyptula/12]$ lsmod | grep list_test
+[~/cloud/code/eudyptula/12]$
