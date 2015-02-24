@@ -1,0 +1,179 @@
+From: Lorenzo Stoakes <lstoakes@gmail.com>
+Date: Mon, 23 Feb 2015 20:14:40 +0000
+Subject: [f8cdc7cef553] [PATCH] Task 14: Add id field to task structure
+
+This patch applies against kernel v3.19. It adds an 'id' field to task_struct
+which defaults to my Eudyptula id (f8cdc7cef553), and additionally exposes it at
+/proc/${PID}/id. Each time this file is read, the id associated with the task is
+incremented.
+
+Proof of the application of this patch and it working in action is enclosed
+below:-
+
+[~/linux]$ cat $(which runLinux)
+#!/bin/bash
+
+KERNEL=$HOME/linux/arch/x86/boot/bzImage
+INITRD=$HOME/kerndev/init.img
+ROOTFS=$HOME/kerndev/rootfs.img
+APPEND="root=/dev/sda rw console=ttyS0"
+#NETOPTS="-net nic -net bridge,br=br0"
+OPTS="-enable-kvm -nographic -m 512M -cpu host -smp 4 $NETOPTS"
+#DEVS="-usb -device usb-host,hostbus=3,hostaddr=6"
+
+qemu-system-x86_64 $OPTS $DEVS -hda $ROOTFS -initrd $INITRD -kernel $KERNEL -append "$APPEND"
+[~/linux]$ runLinux                                                                               [e14]
+[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 3.19.0+ (lorenzo@lucifer) (gcc version 4.9.2 20150204 (prerelease) (GCC) ) #1 SMP Mon Feb 23 21:34:55 GMT 2015
+[    0.000000] Command line: root=/dev/sda rw console=ttyS0
+[    0.000000] e820: BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x000000001ffdefff] usable
+[    0.000000] BIOS-e820: [mem 0x000000001ffdf000-0x000000001fffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000feffc000-0x00000000feffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+
+<snip>
+
+[  OK  ] Listening on D-Bus System Message Bus Socket.
+[  OK  ] Reached target Sockets.
+[  OK  ] Reached target Timers.
+[  OK  ] Reached target Basic System.
+         Starting D-Bus System Message Bus...
+[  OK  ] Started D-Bus System Message Bus.
+         Starting dhcpcd on all interfaces...
+         Starting Login Service...
+         Starting Permit User Sessions...
+[  OK  ] Started Permit User Sessions.
+         Starting Getty on tty1...
+[  OK  ] Started Getty on tty1.
+[  OK  ] Started Login Service.
+[  OK  ] Started dhcpcd on all interfaces.
+[  OK  ] Reached target Network.
+[  OK  ] Found device /dev/ttyS0.
+         Starting Serial Getty on ttyS0...
+[  OK  ] Started Serial Getty on ttyS0.
+[  OK  ] Reached target Login Prompts.
+[  OK  ] Reached target Multi-User System.
+[    1.171239] e1000 0000:00:03.0 enp0s3: renamed from eth0
+[  OK  ] Reached target Graphical Interface.
+[    1.198578] random: nonblocking pool is initialized
+[    1.277400] IPv6: ADDRCONF(NETDEV_UP): enp0s3: link is not ready
+[    1.278204] e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+[    1.278816] IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+[    1.314813] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input3
+[    1.361064] tsc: Refined TSC clocksource calibration: 4000.004 MHz
+
+Arch Linux 3.19.0+ (ttyS0)
+
+localhost login: [    2.361206] Switched to clocksource tsc
+lorenzo
+Password:
+[   85.805502] audit: type=1006 audit(1424727653.804:2): pid=1968 uid=0 subj=kernel old-auid=4294967295 auid=1000 old-ses=4294967295 ses=1 res=1
+[   85.817690] audit: type=1006 audit(1424727653.816:3): pid=2043 uid=0 subj=kernel old-auid=4294967295 auid=1000 old-ses=4294967295 ses=2 res=1
+Last login: Mon Feb 23 21:35:09 on ttyS0
+[lorenzo@localhost ~]$ uname -a
+Linux localhost 3.19.0+ #1 SMP Mon Feb 23 21:34:55 GMT 2015 x86_64 GNU/Linux
+[lorenzo@localhost ~]$ sleep 60 &
+[1] 2036
+[lorenzo@localhost ~]$ cat /proc/2036/id
+f8cdc7cef553
+[lorenzo@localhost ~]$ cat /proc/2036/id
+f8cdc7cef554
+[lorenzo@localhost ~]$ cat /proc/2036/id
+f8cdc7cef555
+[lorenzo@localhost ~]$ cat /proc/2036/id
+f8cdc7cef556
+[lorenzo@localhost ~]$ cat /proc/2036/id
+f8cdc7cef557
+[lorenzo@localhost ~]$ kill 2036
+[1]+  Terminated              sleep 60
+[lorenzo@localhost ~]$ sleep 60 &
+[1] 2042
+[lorenzo@localhost ~]$ cat /proc/2042/id
+f8cdc7cef553
+[lorenzo@localhost ~]$ cat /proc/2042/id
+f8cdc7cef554
+[lorenzo@localhost ~]$ sleep 60 &
+[2] 2045
+[lorenzo@localhost ~]$ cat /proc/2045/id
+f8cdc7cef553
+[lorenzo@localhost ~]$ cat /proc/2045/id
+f8cdc7cef554
+[lorenzo@localhost ~]$ cat /proc/2045/id
+f8cdc7cef555
+[lorenzo@localhost ~]$ cat /proc/2045/id
+f8cdc7cef556
+[lorenzo@localhost ~]$ cat /proc/2045/id
+f8cdc7cef557
+[lorenzo@localhost ~]$ cat /proc/2045/id
+f8cdc7cef558
+
+Signed-off-by: Lorenzo Stoakes <lstoakes@gmail.com>
+---
+ fs/proc/base.c            | 13 +++++++++++++
+ include/linux/init_task.h |  1 +
+ include/linux/sched.h     |  1 +
+ 3 files changed, 15 insertions(+)
+
+diff --git a/fs/proc/base.c b/fs/proc/base.c
+index 3f3d7ae..ac902a1 100644
+--- a/fs/proc/base.c
++++ b/fs/proc/base.c
+@@ -2528,6 +2528,18 @@ static int proc_pid_personality(struct seq_file *m, struct pid_namespace *ns,
+ 	return err;
+ }
+
++static int proc_eudyptula_id(struct seq_file *m, struct pid_namespace *ns,
++		struct pid *pid, struct task_struct *task)
++{
++	int err = lock_trace(task);
++	if (!err) {
++		seq_printf(m, "%llx\n", task->id);
++		task->id++;
++		unlock_trace(task);
++	}
++	return err;
++}
++
+ /*
+  * Thread groups
+  */
+@@ -2628,6 +2640,7 @@ static const struct pid_entry tgid_base_stuff[] = {
+ #ifdef CONFIG_CHECKPOINT_RESTORE
+ 	REG("timers",	  S_IRUGO, proc_timers_operations),
+ #endif
++	ONE("id",         S_IRUGO, proc_eudyptula_id),
+ };
+
+ static int proc_tgid_base_readdir(struct file *file, struct dir_context *ctx)
+diff --git a/include/linux/init_task.h b/include/linux/init_task.h
+index 3037fc0..56a5652 100644
+--- a/include/linux/init_task.h
++++ b/include/linux/init_task.h
+@@ -235,6 +235,7 @@ extern struct task_group root_task_group;
+ 	},								\
+ 	.thread_group	= LIST_HEAD_INIT(tsk.thread_group),		\
+ 	.thread_node	= LIST_HEAD_INIT(init_signals.thread_head),	\
++	.id		= 0xf8cdc7cef553ULL,				\
+ 	INIT_IDS							\
+ 	INIT_PERF_EVENTS(tsk)						\
+ 	INIT_TRACE_IRQFLAGS						\
+diff --git a/include/linux/sched.h b/include/linux/sched.h
+index 8db31ef..c2afc1a 100644
+--- a/include/linux/sched.h
++++ b/include/linux/sched.h
+@@ -1701,6 +1701,7 @@ struct task_struct {
+ #ifdef CONFIG_DEBUG_ATOMIC_SLEEP
+ 	unsigned long	task_state_change;
+ #endif
++	unsigned long long id;
+ };
+
+ /* Future-safe accessor for struct task_struct's cpus_allowed. */
+--
+2.3.0
