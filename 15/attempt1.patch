@@ -1,0 +1,257 @@
+From: Lorenzo Stoakes <lstoakes@gmail.com>
+Date: Tue, 24 Feb 2015 23:57:43 +0000
+Subject: [f8cdc7cef553] [PATCH] Task 15: Add eudyptula syscall
+
+This patch adds a sys_eudyptula syscall to the x86_64 architecture which my test
+environment operates in which accepts as input parameters high_id and low_id
+then combines the two integers (high_id the upper 32 bits of the number, low_id
+the lower 32 bits of the number) and compares this 64-bit value with my
+Eudyptula ID, 0xf8cdc7cef553. If they fail to match an invalid argument error is
+raised.
+
+The userland test program test_eudyptula.c is attached, and proof of the patch
+and userland program working correctly is show below:-
+
+[~/linux]$ cat $(which buildLinux)
+#!/bin/bash
+
+set -o errexit
+
+pushd ~/linux
+
+make mrproper
+make defconfig
+# Required for systemd.
+scripts/config --enable fhandle
+make -j8
+
+# Now to configure our kerndev environment.
+sudo umount /mnt || true
+sudo mount -o loop $HOME/kerndev/rootfs.img /mnt
+trap "sudo umount /mnt" EXIT
+
+sudo make headers_install INSTALL_HDR_PATH=/mnt/usr/
+sudo make modules_install INSTALL_MOD_PATH=/mnt/
+
+popd
+[~/linux]$ buildLinux
+~/linux ~/cloud/code/scratch
+  CLEAN   .
+  CLEAN   arch/x86/kernel/cpu
+  CLEAN   arch/x86/kernel
+  CLEAN   arch/x86/realmode/rm
+  CLEAN   arch/x86/vdso
+  CLEAN   arch/x86/lib
+  CLEAN   drivers/tty/vt
+  CLEAN   drivers/video/logo
+  CLEAN   firmware
+  CLEAN   kernel/time
+  CLEAN   lib
+  CLEAN   security/selinux
+  CLEAN   usr
+  CLEAN   arch/x86/boot/compressed
+  CLEAN   arch/x86/boot
+  CLEAN   arch/x86/tools
+  CLEAN   .tmp_versions
+  CLEAN   scripts/basic
+  CLEAN   scripts/kconfig
+  CLEAN   scripts/mod
+  CLEAN   scripts/selinux/genheaders
+  CLEAN   scripts/selinux/mdp
+  CLEAN   scripts
+  CLEAN   include/config include/generated arch/x86/include/generated
+  CLEAN   .config .version include/generated/uapi/linux/version.h Module.symvers
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/kconfig/conf.o
+  SHIPPED scripts/kconfig/zconf.tab.c
+  SHIPPED scripts/kconfig/zconf.lex.c
+  SHIPPED scripts/kconfig/zconf.hash.c
+  HOSTCC  scripts/kconfig/zconf.tab.o
+  HOSTLD  scripts/kconfig/conf
+*** Default configuration is based on 'x86_64_defconfig'
+#
+# configuration written to .config
+#
+scripts/kconfig/conf --silentoldconfig Kconfig
+  SYSHDR  arch/x86/syscalls/../include/generated/asm/unistd_32_ia32.h
+  SYSTBL  arch/x86/syscalls/../include/generated/asm/syscalls_32.h
+
+<snip>
+
+  LD [M]  net/ipv4/netfilter/nf_nat_ipv4.ko
+  LD [M]  net/ipv4/netfilter/nf_nat_masquerade_ipv4.ko
+  LD [M]  net/ipv6/netfilter/nf_log_ipv6.ko
+  LD [M]  net/netfilter/nf_log_common.ko
+  LD [M]  net/netfilter/nf_nat.ko
+  LD [M]  net/netfilter/nf_nat_ftp.ko
+  LD [M]  net/netfilter/nf_nat_irc.ko
+  LD [M]  net/netfilter/nf_nat_sip.ko
+  LD [M]  net/netfilter/xt_LOG.ko
+  LD [M]  net/netfilter/xt_mark.ko
+  LD [M]  net/netfilter/xt_nat.ko
+  MKPIGGY arch/x86/boot/compressed/piggy.S
+  AS      arch/x86/boot/compressed/piggy.o
+  LD      arch/x86/boot/compressed/vmlinux
+  ZOFFSET arch/x86/boot/zoffset.h
+  OBJCOPY arch/x86/boot/vmlinux.bin
+  AS      arch/x86/boot/header.o
+  LD      arch/x86/boot/setup.elf
+  OBJCOPY arch/x86/boot/setup.bin
+  BUILD   arch/x86/boot/bzImage
+Setup is 15676 bytes (padded to 15872 bytes).
+System is 5795 kB
+CRC eca84d2b
+Kernel: arch/x86/boot/bzImage is ready  (#1)
+[sudo] password for lorenzo:
+  CHK     include/generated/uapi/linux/version.h
+  HOSTCC  scripts/unifdef
+  INSTALL include/linux (410 files)
+  INSTALL include/asm (65 files)
+  INSTALL drivers/thermal/x86_pkg_temp_thermal.ko
+  INSTALL net/ipv4/netfilter/ipt_MASQUERADE.ko
+  INSTALL net/ipv4/netfilter/iptable_nat.ko
+  INSTALL net/ipv4/netfilter/nf_log_arp.ko
+  INSTALL net/ipv4/netfilter/nf_log_ipv4.ko
+  INSTALL net/ipv4/netfilter/nf_nat_ipv4.ko
+  INSTALL net/ipv4/netfilter/nf_nat_masquerade_ipv4.ko
+  INSTALL net/ipv6/netfilter/nf_log_ipv6.ko
+  INSTALL net/netfilter/nf_log_common.ko
+  INSTALL net/netfilter/nf_nat.ko
+  INSTALL net/netfilter/nf_nat_ftp.ko
+  INSTALL net/netfilter/nf_nat_irc.ko
+  INSTALL net/netfilter/nf_nat_sip.ko
+  INSTALL net/netfilter/xt_LOG.ko
+  INSTALL net/netfilter/xt_mark.ko
+  INSTALL net/netfilter/xt_nat.ko
+  DEPMOD  3.19.0+
+~/linux
+[~/linux]$ cat $(which runLinux)
+#!/bin/bash
+
+KERNEL=$HOME/linux/arch/x86/boot/bzImage
+INITRD=$HOME/kerndev/init.img
+ROOTFS=$HOME/kerndev/rootfs.img
+APPEND="root=/dev/sda rw console=ttyS0"
+#NETOPTS="-net nic -net bridge,br=br0"
+OPTS="-enable-kvm -nographic -m 512M -cpu host -smp 4 $NETOPTS"
+#DEVS="-usb -device usb-host,hostbus=3,hostaddr=6"
+
+qemu-system-x86_64 $OPTS $DEVS -hda $ROOTFS -initrd $INITRD -kernel $KERNEL -append "$APPEND"
+[~/linux]$ runLinux
+[~/linux]$ runLinux
+[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 3.19.0+ (lorenzo@lucifer) (gcc version 4.9.2 20150204 (prerelease) (GCC) ) #1 SMP Tue Feb 24 23:47:26 GMT 2015
+[    0.000000] Command line: root=/dev/sda rw console=ttyS0
+[    0.000000] e820: BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x000000001ffdefff] usable
+[    0.000000] BIOS-e820: [mem 0x000000001ffdf000-0x000000001fffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000feffc000-0x00000000feffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] SMBIOS 2.8 present.
+[    0.000000] e820: last_pfn = 0x1ffdf max_arch_pfn = 0x400000000
+[    0.000000] PAT configuration [0-7]: WB  WC  UC- UC  WB  WC  UC- UC
+
+<snip>
+
+[  OK  ] Reached target Login Prompts.
+[  OK  ] Reached target Network.
+[  OK  ] Started Login Service.
+[  OK  ] Reached target Multi-User System.
+[  OK  ] Reached target Graphical Interface.
+
+Arch Linux 3.19.0+ (ttyS0)
+
+localhost login: lorenzo (automatic login)
+
+[    1.244393] audit: type=1006 audit(1424821710.244:2): pid=1987 uid=0 subj=kernel old-auid=4294967295 auid=1000 old-ses=4294967295 ses=1 res=1
+[    1.256563] audit: type=1006 audit(1424821710.256:3): pid=1990 uid=0 subj=kernel old-auid=4294967295 auid=1000 old-ses=4294967295 ses=2 res=1
+Last login: Tue Feb 24 23:42:19 on ttyS0
+[lorenzo@localhost ~]$ [    1.300356] systemd-journald[1442]: File /var/log/journal/b9f29a8d4a9844cd85915ac2f425e396/user-1000.journal corrupted or uncleanly shut down, renaming and replacing.
+[    1.322495] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input3
+[    1.359088] tsc: Refined TSC clocksource calibration: 4000.005 MHz
+[    2.359235] Switched to clocksource tsc
+
+[lorenzo@localhost ~]$ ls
+die  die.c  test_eudyptula.c
+[lorenzo@localhost ~]$ make test_eudyptula
+cc     test_eudyptula.c   -o test_eudyptula
+[lorenzo@localhost ~]$ ./test_eudyptula
+[lorenzo@localhost ~]$ QEMU: Terminated
+[~/linux]$
+
+Signed-off-by: Lorenzo Stoakes <lstoakes@gmail.com>
+---
+ arch/x86/kernel/Makefile         |  2 ++
+ arch/x86/kernel/eudyptula.c      | 18 ++++++++++++++++++
+ arch/x86/syscalls/syscall_64.tbl |  1 +
+ include/linux/syscalls.h         |  2 ++
+ 4 files changed, 23 insertions(+)
+ create mode 100644 arch/x86/kernel/eudyptula.c
+
+diff --git a/arch/x86/kernel/Makefile b/arch/x86/kernel/Makefile
+index 5d4502c..aeae60b 100644
+--- a/arch/x86/kernel/Makefile
++++ b/arch/x86/kernel/Makefile
+@@ -106,6 +106,8 @@ obj-$(CONFIG_TRACING)			+= tracepoint.o
+ obj-$(CONFIG_IOSF_MBI)			+= iosf_mbi.o
+ obj-$(CONFIG_PMC_ATOM)			+= pmc_atom.o
+
++obj-$(CONFIG_X86_64)			+= eudyptula.o
++
+ ###
+ # 64 bit specific files
+ ifeq ($(CONFIG_X86_64),y)
+diff --git a/arch/x86/kernel/eudyptula.c b/arch/x86/kernel/eudyptula.c
+new file mode 100644
+index 0000000..5c8bb36
+--- /dev/null
++++ b/arch/x86/kernel/eudyptula.c
+@@ -0,0 +1,18 @@
++#include <linux/types.h>
++#include <linux/syscalls.h>
++
++#define EUDYPTULA_ID 0xf8cdc7cef553ULL
++
++SYSCALL_DEFINE2(eudyptula, int, high_id, int, low_id)
++{
++	u64 id;
++
++	id = (u64)high_id;
++	id <<= 32;
++	id |= (u32)low_id;
++
++	if (id != EUDYPTULA_ID)
++		return -EINVAL;
++
++	return 0;
++}
+diff --git a/arch/x86/syscalls/syscall_64.tbl b/arch/x86/syscalls/syscall_64.tbl
+index 8d656fb..a2866ee 100644
+--- a/arch/x86/syscalls/syscall_64.tbl
++++ b/arch/x86/syscalls/syscall_64.tbl
+@@ -329,6 +329,7 @@
+ 320	common	kexec_file_load		sys_kexec_file_load
+ 321	common	bpf			sys_bpf
+ 322	64	execveat		stub_execveat
++323	64	eudyptula		sys_eudyptula
+
+ #
+ # x32-specific system call numbers start at 512 to avoid cache impact
+diff --git a/include/linux/syscalls.h b/include/linux/syscalls.h
+index 85893d7..e4922fc 100644
+--- a/include/linux/syscalls.h
++++ b/include/linux/syscalls.h
+@@ -883,3 +883,5 @@ asmlinkage long sys_execveat(int dfd, const char __user *filename,
+ 			const char __user *const __user *envp, int flags);
+
+ #endif
++
++asmlinkage long sys_eudyptula(int high_id, int low_id);
+--
+2.3.0
