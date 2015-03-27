@@ -1,0 +1,1483 @@
+
+drivers/staging/android/./binder_trace.h:87:1: warning: odd constant _Bool cast (ffffffffffffffff becomes 1)
+drivers/staging/android/./binder_trace.h:87:1: warning: odd constant _Bool cast (ffffffffffffffff becomes 1)
+drivers/staging/android/./binder_trace.h:87:1: warning: odd constant _Bool cast (ffffffffffffffff becomes 1)
+drivers/staging/android/./binder_trace.h:270:1: warning: odd constant _Bool cast (ffffffffffffffff becomes 1)
+
+include/linux/rcupdate.h:423:30: warning: context imbalance in 'lowmem_scan' - unexpected unlock
+
+drivers/staging/bcm/CmHost.c: In function 'StoreCmControlResponseMessage':
+drivers/staging/bcm/CmHost.c:1503:3: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+   (struct bcm_connect_mgr_params *) ntohl(
+   ^
+drivers/staging/bcm/CmHost.c:1546:3: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+   (struct bcm_connect_mgr_params *) ntohl(
+   ^
+drivers/staging/bcm/CmHost.c:1564:3: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+   (struct bcm_connect_mgr_params *) ntohl(
+   ^
+
+drivers/staging/comedi/comedi_compat32.c:201:16: warning: cast removes address space of expression
+drivers/staging/comedi/comedi_compat32.c:201:16: warning: cast removes address space of expression
+drivers/staging/comedi/comedi_compat32.c:201:16: warning: cast removes address space of expression
+drivers/staging/comedi/comedi_compat32.c:201:16: warning: cast removes address space of expression
+
+drivers/staging/comedi/drivers/ni_stc.h:720:26: warning: shift too big (4294967295) for type int
+drivers/staging/comedi/drivers/ni_stc.h:720:26: warning: shift too big (4294967295) for type int
+drivers/staging/comedi/drivers/ni_stc.h:720:26: warning: shift too big (4294967295) for type int
+drivers/staging/comedi/drivers/ni_stc.h:720:26: warning: shift too big (4294967295) for type int
+
+drivers/staging/goldfish/goldfish_audio.c:134:43: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/goldfish/goldfish_audio.c:134:43:    expected void const *from
+drivers/staging/goldfish/goldfish_audio.c:134:43:    got char [noderef] <asn:2>*read_buffer
+drivers/staging/goldfish/goldfish_audio.c:167:36: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/goldfish/goldfish_audio.c:167:36:    expected void *to
+drivers/staging/goldfish/goldfish_audio.c:167:36:    got char [noderef] <asn:2>*[assigned] kbuf
+drivers/staging/goldfish/goldfish_audio.c:296:27: warning: incorrect type in assignment (different address spaces)
+drivers/staging/goldfish/goldfish_audio.c:296:27:    expected char [noderef] <asn:2>*buffer_virt
+drivers/staging/goldfish/goldfish_audio.c:296:27:    got void *
+
+drivers/staging/lustre/lnet/klnds/o2iblnd/../../../include/linux/lnet/lib-lnet.h:798:48: warning: incorrect type in initializer (different address spaces)
+drivers/staging/lustre/lnet/klnds/o2iblnd/../../../include/linux/lnet/lib-lnet.h:798:48:    expected void [noderef] <asn:1>*iov_base
+drivers/staging/lustre/lnet/klnds/o2iblnd/../../../include/linux/lnet/lib-lnet.h:798:48:    got void *dest
+drivers/staging/lustre/lnet/klnds/o2iblnd/../../../include/linux/lnet/lib-lnet.h:787:47: warning: incorrect type in initializer (different address spaces)
+drivers/staging/lustre/lnet/klnds/o2iblnd/../../../include/linux/lnet/lib-lnet.h:787:47:    expected void [noderef] <asn:1>*iov_base
+drivers/staging/lustre/lnet/klnds/o2iblnd/../../../include/linux/lnet/lib-lnet.h:787:47:    got void *dest
+drivers/staging/lustre/lnet/klnds/o2iblnd/../../../include/linux/lnet/lib-lnet.h:819:48: warning: incorrect type in initializer (different address spaces)
+drivers/staging/lustre/lnet/klnds/o2iblnd/../../../include/linux/lnet/lib-lnet.h:819:48:    expected void [noderef] <asn:1>*iov_base
+drivers/staging/lustre/lnet/klnds/o2iblnd/../../../include/linux/lnet/lib-lnet.h:819:48:    got void *src
+drivers/staging/lustre/lnet/klnds/o2iblnd/../../../include/linux/lnet/lib-lnet.h:808:47: warning: incorrect type in initializer (different address spaces)
+drivers/staging/lustre/lnet/klnds/o2iblnd/../../../include/linux/lnet/lib-lnet.h:808:47:    expected void [noderef] <asn:1>*iov_base
+drivers/staging/lustre/lnet/klnds/o2iblnd/../../../include/linux/lnet/lib-lnet.h:808:47:    got void *src
+
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_cb.c:134:51: warning: cast removes address space of expression
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_cb.c:134:39: warning: incorrect type in assignment (different address spaces)
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_cb.c:134:39:    expected void [noderef] <asn:1>*iov_base
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_cb.c:134:39:    got void *<noident>
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_cb.c:1055:55: warning: incorrect type in assignment (different address spaces)
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_cb.c:1055:55:    expected void [noderef] <asn:1>*iov_base
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_cb.c:1055:55:    got char *<noident>
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_cb.c:1069:55: warning: incorrect type in assignment (different address spaces)
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_cb.c:1069:55:    expected void [noderef] <asn:1>*iov_base
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_cb.c:1069:55:    got char *<noident>
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_cb.c:1096:50: warning: incorrect type in assignment (different address spaces)
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_cb.c:1096:50:    expected void [noderef] <asn:1>*iov_base
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_cb.c:1096:50:    got char static *<noident>
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_cb.c:1221:47: warning: incorrect type in assignment (different address spaces)
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_cb.c:1221:47:    expected void [noderef] <asn:1>*iov_base
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_cb.c:1221:47:    got char *<noident>
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_cb.c:2395:9: warning: context imbalance in 'ksocknal_send_keepalive_locked' - unexpected unlock
+
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_proto.c:721:32: warning: incorrect type in assignment (different address spaces)
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_proto.c:721:32:    expected void [noderef] <asn:1>*iov_base
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_proto.c:721:32:    got void *<noident>
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_proto.c:730:32: warning: incorrect type in assignment (different address spaces)
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_proto.c:730:32:    expected void [noderef] <asn:1>*iov_base
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_proto.c:730:32:    got void *<noident>
+
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_lib-linux.c:170:48: warning: incorrect type in assignment (different address spaces)
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_lib-linux.c:170:48:    expected void [noderef] <asn:1>*iov_base
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_lib-linux.c:170:48:    got void *
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_lib-linux.c:253:66: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_lib-linux.c:253:66:    expected unsigned char const *p
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_lib-linux.c:253:66:    got void [noderef] <asn:1>*iov_base
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_lib-linux.c:300:23: warning: incorrect type in assignment (different address spaces)
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_lib-linux.c:300:23:    expected void [noderef] <asn:1>*iov_base
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_lib-linux.c:300:23:    got void *
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_lib-linux.c:345:48: warning: incorrect type in assignment (different address spaces)
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_lib-linux.c:345:48:    expected void [noderef] <asn:1>*iov_base
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_lib-linux.c:345:48:    got void *
+drivers/staging/lustre/lnet/klnds/socklnd/socklnd_lib-linux.c:393:9: error: incompatible types in comparison expression (different address spaces)
+
+drivers/staging/lustre/lnet/lnet/api-ni.c:1930:38: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/lnet/api-ni.c:1930:38:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/lnet/api-ni.c:1930:38:    got struct lnet_process_id_t [usertype] *
+
+drivers/staging/lustre/lnet/lnet/lib-md.c:154:45: warning: incorrect type in assignment (different address spaces)
+drivers/staging/lustre/lnet/lnet/lib-md.c:154:45:    expected void [noderef] <asn:1>*iov_base
+drivers/staging/lustre/lnet/lnet/lib-md.c:154:45:    got void *[usertype] start
+drivers/staging/lustre/lnet/lnet/lib-md.c:222:1: warning: symbol 'lnet_md_validate' was not declared. Should it be static?
+
+drivers/staging/lustre/lnet/lnet/lib-ptl.c:42:9: warning: symbol 'portal_rotor' was not declared. Should it be static?
+
+drivers/staging/lustre/lnet/lnet/lib-move.c:208:25: warning: cast removes address space of expression
+drivers/staging/lustre/lnet/lnet/lib-move.c:209:26: warning: cast removes address space of expression
+drivers/staging/lustre/lnet/lnet/lib-move.c:259:35: warning: cast removes address space of expression
+drivers/staging/lustre/lnet/lnet/lib-move.c:259:31: warning: incorrect type in assignment (different address spaces)
+drivers/staging/lustre/lnet/lnet/lib-move.c:259:31:    expected void [noderef] <asn:1>*iov_base
+drivers/staging/lustre/lnet/lnet/lib-move.c:259:31:    got char *
+drivers/staging/lustre/lnet/lnet/lib-move.c:414:25: warning: cast removes address space of expression
+drivers/staging/lustre/lnet/lnet/lib-move.c:485:31: warning: cast removes address space of expression
+drivers/staging/lustre/lnet/lnet/lib-move.c:565:1: warning: symbol 'lnet_ni_recv' was not declared. Should it be static?
+drivers/staging/lustre/lnet/lnet/lib-move.c:603:1: warning: symbol 'lnet_setpayloadbuffer' was not declared. Should it be static?
+drivers/staging/lustre/lnet/lnet/lib-move.c:643:1: warning: symbol 'lnet_ni_send' was not declared. Should it be static?
+drivers/staging/lustre/lnet/lnet/lib-move.c:658:1: warning: symbol 'lnet_ni_eager_recv' was not declared. Should it be static?
+drivers/staging/lustre/lnet/lnet/lib-move.c:683:1: warning: symbol 'lnet_ni_query_locked' was not declared. Should it be static?
+drivers/staging/lustre/lnet/lnet/lib-move.c:735:1: warning: symbol 'lnet_peer_alive_locked' was not declared. Should it be static?
+drivers/staging/lustre/lnet/lnet/lib-move.c:874:19: warning: symbol 'lnet_msg2bufpool' was not declared. Should it be static?
+drivers/staging/lustre/lnet/lnet/lib-move.c:895:1: warning: symbol 'lnet_post_routed_recv_locked' was not declared. Should it be static?
+
+drivers/staging/lustre/lnet/lnet/module.c:47:1: warning: symbol 'lnet_configure' was not declared. Should it be static?
+drivers/staging/lustre/lnet/lnet/module.c:67:1: warning: symbol 'lnet_unconfigure' was not declared. Should it be static?
+drivers/staging/lustre/lnet/lnet/module.c:87:1: warning: symbol 'lnet_ioctl' was not declared. Should it be static?
+drivers/staging/lustre/lnet/lnet/module.c:111:1: warning: symbol 'lnet_ioctl_handler' was not declared. Should it be static?
+drivers/staging/lustre/lnet/lnet/module.c:114:1: warning: symbol 'init_lnet' was not declared. Should it be static?
+drivers/staging/lustre/lnet/lnet/module.c:139:1: warning: symbol 'fini_lnet' was not declared. Should it be static?
+
+drivers/staging/lustre/lnet/lnet/lo.c:39:1: warning: symbol 'lolnd_send' was not declared. Should it be static?
+drivers/staging/lustre/lnet/lnet/lo.c:48:1: warning: symbol 'lolnd_recv' was not declared. Should it be static?
+drivers/staging/lustre/lnet/lnet/lo.c:90:1: warning: symbol 'lolnd_shutdown' was not declared. Should it be static?
+drivers/staging/lustre/lnet/lnet/lo.c:99:1: warning: symbol 'lolnd_startup' was not declared. Should it be static?
+
+drivers/staging/lustre/lnet/lnet/router.c:756:1: warning: symbol 'lnet_wait_known_routerstate' was not declared. Should it be static?
+drivers/staging/lustre/lnet/lnet/router.c:788:1: warning: symbol 'lnet_update_ni_status_locked' was not declared. Should it be static?
+drivers/staging/lustre/lnet/lnet/router.c:828:1: warning: symbol 'lnet_destroy_rc_data' was not declared. Should it be static?
+drivers/staging/lustre/lnet/lnet/router.c:848:16: warning: symbol 'lnet_create_rc_data_locked' was not declared. Should it be static?
+drivers/staging/lustre/lnet/lnet/router.c:1228:1: warning: symbol 'lnet_destroy_rtrbuf' was not declared. Should it be static?
+drivers/staging/lustre/lnet/lnet/router.c:1238:15: warning: symbol 'lnet_new_rtrbuf' was not declared. Should it be static?
+drivers/staging/lustre/lnet/lnet/router.c:1274:1: warning: symbol 'lnet_rtrpool_free_bufs' was not declared. Should it be static?
+drivers/staging/lustre/lnet/lnet/router.c:1303:1: warning: symbol 'lnet_rtrpool_alloc_bufs' was not declared. Should it be static?
+drivers/staging/lustre/lnet/lnet/router.c:1337:1: warning: symbol 'lnet_rtrpool_init' was not declared. Should it be static?
+
+drivers/staging/lustre/lnet/lnet/router_proc.c:167:5: warning: symbol 'proc_lnet_routes' was not declared. Should it be static?
+drivers/staging/lustre/lnet/lnet/router_proc.c:293:5: warning: symbol 'proc_lnet_routers' was not declared. Should it be static?
+drivers/staging/lustre/lnet/lnet/router_proc.c:428:5: warning: symbol 'proc_lnet_peers' was not declared. Should it be static?
+drivers/staging/lustre/lnet/lnet/router_proc.c:660:5: warning: symbol 'proc_lnet_nis' was not declared. Should it be static?
+
+drivers/staging/lustre/lnet/selftest/console.c:387:51: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/console.c:387:51:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/console.c:387:51:    got int *
+drivers/staging/lustre/lnet/selftest/console.c:389:54: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/console.c:389:54:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/console.c:389:54:    got char *
+drivers/staging/lustre/lnet/selftest/console.c:421:48: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lnet/selftest/console.c:421:48:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lnet/selftest/console.c:421:48:    got struct lnet_process_id_t [usertype] *
+drivers/staging/lustre/lnet/selftest/console.c:490:48: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lnet/selftest/console.c:490:48:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lnet/selftest/console.c:490:48:    got struct lnet_process_id_t [usertype] *
+drivers/staging/lustre/lnet/selftest/console.c:734:45: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/console.c:734:45:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/console.c:734:45:    got char *name_up
+drivers/staging/lustre/lnet/selftest/console.c:764:43: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/console.c:764:43:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/console.c:764:43:    got struct lnet_process_id_t *<noident>
+drivers/staging/lustre/lnet/selftest/console.c:766:43: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/console.c:766:43:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/console.c:766:43:    got int *<noident>
+drivers/staging/lustre/lnet/selftest/console.c:818:27: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/console.c:818:27:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/console.c:818:27:    got struct lstcon_ndlist_ent_t [usertype] *gents_p
+drivers/staging/lustre/lnet/selftest/console.c:913:45: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/console.c:913:45:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/console.c:913:45:    got char *name_up
+drivers/staging/lustre/lnet/selftest/console.c:986:27: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/console.c:986:27:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/console.c:986:27:    got struct lstcon_test_batch_ent_t [usertype] *ent_up
+drivers/staging/lustre/lnet/selftest/console.c:1390:43: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/console.c:1390:43:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/console.c:1390:43:    got int *
+drivers/staging/lustre/lnet/selftest/console.c:1475:26: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/console.c:1475:26:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/console.c:1475:26:    got struct sfw_counters_t [usertype] *[assigned] sfwk_stat
+drivers/staging/lustre/lnet/selftest/console.c:1476:26: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/console.c:1476:26:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/console.c:1476:26:    got struct srpc_counters_t [usertype] *[assigned] srpc_stat
+drivers/staging/lustre/lnet/selftest/console.c:1477:26: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/console.c:1477:26:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/console.c:1477:26:    got struct lnet_counters_t [usertype] *[assigned] lnet_stat
+drivers/staging/lustre/lnet/selftest/console.c:1545:48: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lnet/selftest/console.c:1545:48:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lnet/selftest/console.c:1545:48:    got struct lnet_process_id_t [usertype] *
+drivers/staging/lustre/lnet/selftest/console.c:1657:48: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lnet/selftest/console.c:1657:48:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lnet/selftest/console.c:1657:48:    got struct lnet_process_id_t [usertype] *
+drivers/staging/lustre/lnet/selftest/console.c:1760:26: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/console.c:1760:26:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/console.c:1760:26:    got struct lst_sid_t [usertype] *sid_up
+drivers/staging/lustre/lnet/selftest/console.c:1787:26: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/console.c:1787:26:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/console.c:1787:26:    got struct lst_sid_t [usertype] *sid_up
+drivers/staging/lustre/lnet/selftest/console.c:1789:26: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/console.c:1789:26:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/console.c:1789:26:    got int *key_up
+drivers/staging/lustre/lnet/selftest/console.c:1791:26: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/console.c:1791:26:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/console.c:1791:26:    got unsigned int *featp
+drivers/staging/lustre/lnet/selftest/console.c:1793:26: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/console.c:1793:26:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/console.c:1793:26:    got struct lstcon_ndlist_ent_t [usertype] *ndinfo_up
+drivers/staging/lustre/lnet/selftest/console.c:1794:26: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/console.c:1794:26:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/console.c:1794:26:    got char *name_up
+drivers/staging/lustre/lnet/selftest/console.c:1991:1: warning: symbol 'lstcon_ioctl_handler' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/console.c:1995:1: warning: symbol 'lstcon_console_init' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/console.c:2065:1: warning: symbol 'lstcon_console_fini' was not declared. Should it be static?
+
+drivers/staging/lustre/lnet/selftest/conrpc.c:92:1: warning: symbol 'lstcon_rpc_init' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/conrpc.c:117:1: warning: symbol 'lstcon_rpc_prep' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/conrpc.c:186:1: warning: symbol 'lstcon_rpc_post' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/conrpc.c:387:1: warning: symbol 'lstcon_rpc_get_reply' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/conrpc.c:489:42: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conrpc.c:489:42:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lnet/selftest/conrpc.c:489:42:    got struct list_head *[assigned] next
+drivers/staging/lustre/lnet/selftest/conrpc.c:510:35: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conrpc.c:510:35:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/conrpc.c:510:35:    got struct lnet_process_id_t *<noident>
+drivers/staging/lustre/lnet/selftest/conrpc.c:512:35: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conrpc.c:512:35:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/conrpc.c:512:35:    got struct timeval *<noident>
+drivers/staging/lustre/lnet/selftest/conrpc.c:513:35: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conrpc.c:513:35:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/conrpc.c:513:35:    got int *<noident>
+drivers/staging/lustre/lnet/selftest/conrpc.c:515:35: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conrpc.c:515:35:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/conrpc.c:515:35:    got int *<noident>
+drivers/staging/lustre/lnet/selftest/conrpc.c:525:35: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conrpc.c:525:35:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/conrpc.c:525:35:    got struct lst_sid_t *<noident>
+drivers/staging/lustre/lnet/selftest/conrpc.c:527:35: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conrpc.c:527:35:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/conrpc.c:527:35:    got int *<noident>
+drivers/staging/lustre/lnet/selftest/conrpc.c:706:26: warning: symbol 'lstcon_next_id' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/conrpc.c:722:1: warning: symbol 'lstcon_dstnodes_prep' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/conrpc.c:776:1: warning: symbol 'lstcon_pingrpc_prep' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/conrpc.c:787:1: warning: symbol 'lstcon_bulkrpc_v0_prep' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/conrpc.c:799:1: warning: symbol 'lstcon_bulkrpc_v1_prep' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/conrpc.c:919:1: warning: symbol 'lstcon_sesnew_stat_reply' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/conrpc.c:1166:1: warning: symbol 'lstcon_rpc_pinger' was not declared. Should it be static?
+
+drivers/staging/lustre/lnet/selftest/conctl.c:66:36: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conctl.c:66:36:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lnet/selftest/conctl.c:66:36:    got char *[usertype] lstio_ses_namep
+drivers/staging/lustre/lnet/selftest/conctl.c:49:1: warning: symbol 'lst_session_new_ioctl' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/conctl.c:86:1: warning: symbol 'lst_session_end_ioctl' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/conctl.c:95:1: warning: symbol 'lst_session_info_ioctl' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/conctl.c:139:46: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conctl.c:139:46:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lnet/selftest/conctl.c:139:46:    got char *[usertype] lstio_dbg_namep
+drivers/staging/lustre/lnet/selftest/conctl.c:117:1: warning: symbol 'lst_debug_ioctl' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/conctl.c:216:36: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conctl.c:216:36:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lnet/selftest/conctl.c:216:36:    got char *[usertype] lstio_grp_namep
+drivers/staging/lustre/lnet/selftest/conctl.c:198:1: warning: symbol 'lst_group_add_ioctl' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/conctl.c:250:36: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conctl.c:250:36:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lnet/selftest/conctl.c:250:36:    got char *[usertype] lstio_grp_namep
+drivers/staging/lustre/lnet/selftest/conctl.c:232:1: warning: symbol 'lst_group_del_ioctl' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/conctl.c:285:32: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conctl.c:285:32:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lnet/selftest/conctl.c:285:32:    got char *[usertype] lstio_grp_namep
+drivers/staging/lustre/lnet/selftest/conctl.c:266:1: warning: symbol 'lst_group_update_ioctl' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/conctl.c:346:38: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conctl.c:346:38:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lnet/selftest/conctl.c:346:38:    got char *[usertype] lstio_grp_namep
+drivers/staging/lustre/lnet/selftest/conctl.c:361:30: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conctl.c:361:30:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/conctl.c:361:30:    got unsigned int *[usertype] lstio_grp_featp
+drivers/staging/lustre/lnet/selftest/conctl.c:324:1: warning: symbol 'lst_nodes_add_ioctl' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/conctl.c:369:1: warning: symbol 'lst_group_list_ioctl' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/conctl.c:410:48: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conctl.c:410:48:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lnet/selftest/conctl.c:410:48:    got int *[usertype] lstio_grp_ndentp
+drivers/staging/lustre/lnet/selftest/conctl.c:412:48: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conctl.c:412:48:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lnet/selftest/conctl.c:412:48:    got int *[usertype] lstio_grp_idxp
+drivers/staging/lustre/lnet/selftest/conctl.c:425:36: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conctl.c:425:36:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lnet/selftest/conctl.c:425:36:    got char *[usertype] lstio_grp_namep
+drivers/staging/lustre/lnet/selftest/conctl.c:442:31: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conctl.c:442:31:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/conctl.c:442:31:    got int *[usertype] lstio_grp_idxp
+drivers/staging/lustre/lnet/selftest/conctl.c:443:31: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conctl.c:443:31:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/conctl.c:443:31:    got int *[usertype] lstio_grp_ndentp
+drivers/staging/lustre/lnet/selftest/conctl.c:386:1: warning: symbol 'lst_group_info_ioctl' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/conctl.c:468:36: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conctl.c:468:36:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lnet/selftest/conctl.c:468:36:    got char *[usertype] lstio_bat_namep
+drivers/staging/lustre/lnet/selftest/conctl.c:450:1: warning: symbol 'lst_batch_add_ioctl' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/conctl.c:502:36: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conctl.c:502:36:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lnet/selftest/conctl.c:502:36:    got char *[usertype] lstio_bat_namep
+drivers/staging/lustre/lnet/selftest/conctl.c:484:1: warning: symbol 'lst_batch_run_ioctl' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/conctl.c:538:36: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conctl.c:538:36:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lnet/selftest/conctl.c:538:36:    got char *[usertype] lstio_bat_namep
+drivers/staging/lustre/lnet/selftest/conctl.c:519:1: warning: symbol 'lst_batch_stop_ioctl' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/conctl.c:577:36: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conctl.c:577:36:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lnet/selftest/conctl.c:577:36:    got char *[usertype] lstio_bat_namep
+drivers/staging/lustre/lnet/selftest/conctl.c:555:1: warning: symbol 'lst_batch_query_ioctl' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/conctl.c:597:1: warning: symbol 'lst_batch_list_ioctl' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/conctl.c:638:48: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conctl.c:638:48:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lnet/selftest/conctl.c:638:48:    got int *[usertype] lstio_bat_idxp
+drivers/staging/lustre/lnet/selftest/conctl.c:640:48: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conctl.c:640:48:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lnet/selftest/conctl.c:640:48:    got int *[usertype] lstio_bat_ndentp
+drivers/staging/lustre/lnet/selftest/conctl.c:653:36: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conctl.c:653:36:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lnet/selftest/conctl.c:653:36:    got char *[usertype] lstio_bat_namep
+drivers/staging/lustre/lnet/selftest/conctl.c:671:31: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conctl.c:671:31:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/conctl.c:671:31:    got int *[usertype] lstio_bat_idxp
+drivers/staging/lustre/lnet/selftest/conctl.c:672:31: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conctl.c:672:31:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/conctl.c:672:31:    got int *[usertype] lstio_bat_ndentp
+drivers/staging/lustre/lnet/selftest/conctl.c:614:1: warning: symbol 'lst_batch_info_ioctl' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/conctl.c:703:38: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conctl.c:703:38:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lnet/selftest/conctl.c:703:38:    got char *[usertype] lstio_sta_namep
+drivers/staging/lustre/lnet/selftest/conctl.c:679:1: warning: symbol 'lst_stat_query_ioctl' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/conctl.c:777:44: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conctl.c:777:44:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lnet/selftest/conctl.c:777:44:    got char *[usertype] lstio_tes_bat_name
+drivers/staging/lustre/lnet/selftest/conctl.c:779:42: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conctl.c:779:42:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lnet/selftest/conctl.c:779:42:    got char *[usertype] lstio_tes_sgrp_name
+drivers/staging/lustre/lnet/selftest/conctl.c:781:42: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conctl.c:781:42:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lnet/selftest/conctl.c:781:42:    got char *[usertype] lstio_tes_dgrp_name
+drivers/staging/lustre/lnet/selftest/conctl.c:783:39: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conctl.c:783:39:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lnet/selftest/conctl.c:783:39:    got void *[usertype] lstio_tes_param
+drivers/staging/lustre/lnet/selftest/conctl.c:797:40: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conctl.c:797:40:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/conctl.c:797:40:    got int *[usertype] lstio_tes_retp
+drivers/staging/lustre/lnet/selftest/conctl.c:724:5: warning: symbol 'lst_test_add_ioctl' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/conctl.c:833:37: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conctl.c:833:37:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lnet/selftest/conctl.c:833:37:    got char *ioc_pbuf1
+drivers/staging/lustre/lnet/selftest/conctl.c:918:30: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lnet/selftest/conctl.c:918:30:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lnet/selftest/conctl.c:918:30:    got char *ioc_pbuf2
+drivers/staging/lustre/lnet/selftest/conctl.c:816:1: warning: symbol 'lstcon_ioctl_entry' was not declared. Should it be static?
+
+drivers/staging/lustre/lnet/selftest/framework.c:115:3: warning: symbol 'sfw_data' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/framework.c:160:1: warning: symbol 'sfw_add_session_timer' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/framework.c:180:1: warning: symbol 'sfw_del_session_timer' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/framework.c:242:1: warning: symbol 'sfw_session_expired' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/framework.c:288:1: warning: symbol 'sfw_server_rpc_done' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/framework.c:306:1: warning: symbol 'sfw_client_rpc_fini' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/framework.c:328:13: warning: symbol 'sfw_find_batch' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/framework.c:344:13: warning: symbol 'sfw_bid2batch' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/framework.c:371:1: warning: symbol 'sfw_get_stats' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/framework.c:483:1: warning: symbol 'sfw_remove_session' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/framework.c:515:1: warning: symbol 'sfw_debug_session' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/framework.c:536:1: warning: symbol 'sfw_test_rpc_fini' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/framework.c:558:1: warning: symbol 'sfw_load_test' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/framework.c:595:1: warning: symbol 'sfw_unload_test' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/framework.c:613:1: warning: symbol 'sfw_destroy_test_instance' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/framework.c:647:1: warning: symbol 'sfw_destroy_batch' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/framework.c:686:1: warning: symbol 'sfw_unpack_addtest_req' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/framework.c:731:1: warning: symbol 'sfw_add_test_instance' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/framework.c:869:1: warning: symbol 'sfw_test_rpc_done' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/framework.c:948:1: warning: symbol 'sfw_run_test' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/framework.c:998:1: warning: symbol 'sfw_run_batch' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/framework.c:1076:1: warning: symbol 'sfw_query_batch' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/framework.c:1121:1: warning: symbol 'sfw_add_test' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/framework.c:1191:1: warning: symbol 'sfw_control_batch' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/framework.c:1232:1: warning: symbol 'sfw_handle_server_rpc' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/framework.c:1338:1: warning: symbol 'sfw_bulk_ready' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/framework.c:210:9: warning: context imbalance in 'sfw_deactivate_session' - unexpected unlock
+
+drivers/staging/lustre/lnet/selftest/timer.c:68:3: warning: symbol 'stt_data' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/timer.c:125:1: warning: symbol 'stt_expire_list' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/timer.c:149:1: warning: symbol 'stt_check_timers' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/timer.c:172:1: warning: symbol 'stt_timer_main' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/timer.c:191:1: warning: symbol 'stt_start_timer_thread' was not declared. Should it be static?
+
+drivers/staging/lustre/lnet/selftest/rpc.c:64:3: warning: symbol 'srpc_data' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/rpc.c:91:1: warning: symbol 'srpc_add_bulk_page' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/rpc.c:174:1: warning: symbol 'srpc_init_server_rpc' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/rpc.c:355:1: warning: symbol 'srpc_post_passive_rdma' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/rpc.c:395:1: warning: symbol 'srpc_post_active_rdma' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/rpc.c:447:1: warning: symbol 'srpc_post_active_rqtbuf' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/rpc.c:456:1: warning: symbol 'srpc_post_passive_rqtbuf' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/rpc.c:470:1: warning: symbol 'srpc_service_post_buffer' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/rpc.c:701:1: warning: symbol 'srpc_service_recycle_buffer' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/rpc.c:791:1: warning: symbol 'srpc_send_request' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/rpc.c:811:1: warning: symbol 'srpc_prepare_reply' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/rpc.c:835:1: warning: symbol 'srpc_prepare_bulk' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/rpc.c:867:1: warning: symbol 'srpc_do_bulk' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/rpc.c:895:1: warning: symbol 'srpc_server_rpc_done' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/rpc.c:1070:1: warning: symbol 'srpc_client_rpc_expired' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/rpc.c:1112:1: warning: symbol 'srpc_del_client_rpc_timer' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/rpc.c:1133:1: warning: symbol 'srpc_client_rpc_done' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/rpc.c:1397:1: warning: symbol 'srpc_lnet_ev_handler' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/rpc.c:508:9: warning: context imbalance in 'srpc_service_post_buffer' - unexpected unlock
+drivers/staging/lustre/lnet/selftest/rpc.c:725:20: warning: context imbalance in 'srpc_service_recycle_buffer' - unexpected unlock
+drivers/staging/lustre/lnet/selftest/rpc.c:766:9: warning: context imbalance in 'srpc_shutdown_service' - different lock contexts for basic block
+
+drivers/staging/lustre/lnet/selftest/module.c:59:1: warning: symbol 'lnet_selftest_fini' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/module.c:94:1: warning: symbol 'lnet_selftest_structure_assertion' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/module.c:105:1: warning: symbol 'lnet_selftest_init' was not declared. Should it be static?
+
+drivers/staging/lustre/lnet/selftest/ping_test.c:47:5: warning: symbol 'ping_srv_workitems' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/ping_test.c:214:23: warning: symbol 'ping_test_client' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/ping_test.c:215:6: warning: symbol 'ping_init_test_client' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/ping_test.c:223:16: warning: symbol 'ping_test_service' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/ping_test.c:224:6: warning: symbol 'ping_init_test_service' was not declared. Should it be static?
+
+drivers/staging/lustre/lnet/selftest/brw_test.c:237:1: warning: symbol 'brw_check_bulk' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/brw_test.c:362:1: warning: symbol 'brw_server_rpc_done' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/brw_test.c:382:1: warning: symbol 'brw_bulk_ready' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/brw_test.c:418:1: warning: symbol 'brw_server_handle' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/brw_test.c:491:23: warning: symbol 'brw_test_client' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/brw_test.c:492:6: warning: symbol 'brw_init_test_client' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/brw_test.c:500:16: warning: symbol 'brw_test_service' was not declared. Should it be static?
+drivers/staging/lustre/lnet/selftest/brw_test.c:501:6: warning: symbol 'brw_init_test_service' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/fid/lproc_fid.c:145:35: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/fid/lproc_fid.c:145:35:    expected char const *buffer
+drivers/staging/lustre/lustre/fid/lproc_fid.c:145:35:    got char const [noderef] <asn:1>*buffer
+
+drivers/staging/lustre/lustre/fld/fld_request.c:272:23: warning: symbol 'fld_type_proc_dir' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/fld/fld_cache.c:260:6: warning: symbol 'fld_cache_punch_hole' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/fld/lproc_fld.c:149:24: warning: symbol 'fld_proc_cache_flush_fops' was not declared. Should it be static?
+drivers/staging/lustre/lustre/fld/lproc_fld.c:157:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/fld/lproc_fld.c:157:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/fld/lproc_fld.c:157:1:    got long ( static [toplevel] *<noident> )( ... )
+
+drivers/staging/lustre/lustre/libcfs/linux/linux-tracefile.c:52:21: warning: symbol 'cfs_tracefile_sem' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/linux/linux-tracefile.c:153:5: warning: context imbalance in 'cfs_trace_lock_tcd' - wrong count at exit
+drivers/staging/lustre/lustre/libcfs/linux/linux-tracefile.c:171:39: warning: context imbalance in 'cfs_trace_unlock_tcd' - unexpected unlock
+
+drivers/staging/lustre/lustre/libcfs/linux/linux-debug.c:64:6: warning: symbol 'lnet_upcall' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/linux/linux-debug.c:65:6: warning: symbol 'lnet_debug_log_upcall' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/linux/linux-debug.c:151:6: error: symbol 'lbug_with_loc' redeclared with different type (originally declared at drivers/staging/lustre/lustre/libcfs/linux/../../../include/linux/libcfs/libcfs_private.h:86) - different modifiers
+
+drivers/staging/lustre/lustre/libcfs/linux/linux-prim.c:198:1: warning: symbol 'libcfs_arch_init' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/linux/linux-prim.c:204:1: warning: symbol 'libcfs_arch_cleanup' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/libcfs/linux/linux-tcpip.c:47:1: warning: symbol 'libcfs_sock_ioctl' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/linux/linux-tcpip.c:171:29: warning: incorrect type in assignment (different address spaces)
+drivers/staging/lustre/lustre/libcfs/linux/linux-tcpip.c:171:29:    expected char [noderef] <asn:1>*ifcu_buf
+drivers/staging/lustre/lustre/libcfs/linux/linux-tcpip.c:171:29:    got char *<noident>
+
+drivers/staging/lustre/lustre/libcfs/linux/linux-proc.c:235:5: warning: symbol 'proc_console_max_delay_cs' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/linux/linux-proc.c:267:5: warning: symbol 'proc_console_min_delay_cs' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/linux/linux-proc.c:299:5: warning: symbol 'proc_console_backoff' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/linux/linux-proc.c:327:5: warning: symbol 'libcfs_force_lbug' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/linux/linux-proc.c:335:5: warning: symbol 'proc_fail_loc' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/linux/linux-proc.c:560:5: warning: symbol 'insert_proc' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/linux/linux-proc.c:567:6: warning: symbol 'remove_proc' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/libcfs/linux/linux-curproc.c:85:6: warning: symbol 'cfs_kernel_cap_pack' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/linux/linux-curproc.c:91:6: warning: symbol 'cfs_kernel_cap_unpack' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/libcfs/linux/linux-module.c:52:34: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/libcfs/linux/linux-module.c:52:34:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/libcfs/linux/linux-module.c:52:34:    got void *<noident>
+drivers/staging/lustre/lustre/libcfs/linux/linux-module.c:72:34: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/libcfs/linux/linux-module.c:72:34:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/libcfs/linux/linux-module.c:72:34:    got void *<noident>
+drivers/staging/lustre/lustre/libcfs/linux/linux-module.c:94:27: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/libcfs/linux/linux-module.c:94:27:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/libcfs/linux/linux-module.c:94:27:    got char *<noident>
+drivers/staging/lustre/lustre/libcfs/linux/linux-module.c:179:19: warning: symbol 'libcfs_dev' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/libcfs/debug.c:60:14: warning: symbol 'libcfs_debug_mb' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/debug.c:96:14: warning: symbol 'portal_enter_debugger' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/debug.c:118:6: warning: symbol 'libcfs_debug_file_path' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/debug.c:127:12: warning: symbol 'libcfs_debug_subsys2str' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/debug.c:188:12: warning: symbol 'libcfs_debug_dbg2str' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/debug.c:355:5: warning: symbol 'libcfs_debug_dumplog_thread' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/libcfs/nidstrings.c:63:6: warning: symbol 'libcfs_init_nidstrings' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/nidstrings.c:200:11: warning: symbol 'libcfs_nnetstrfns' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/nidstrings.c:203:1: warning: symbol 'libcfs_lo_str2addr' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/nidstrings.c:210:1: warning: symbol 'libcfs_ip_addr2str' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/nidstrings.c:227:1: warning: symbol 'libcfs_ip_str2addr' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/nidstrings.c:248:1: warning: symbol 'libcfs_decnum_addr2str' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/nidstrings.c:254:1: warning: symbol 'libcfs_hexnum_addr2str' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/nidstrings.c:260:1: warning: symbol 'libcfs_num_str2addr' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/nidstrings.c:279:18: warning: symbol 'libcfs_lnd2netstrfns' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/nidstrings.c:292:18: warning: symbol 'libcfs_namenum2netstrfns' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/nidstrings.c:307:18: warning: symbol 'libcfs_name2netstrfns' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/libcfs/module.c:46:1: warning: symbol 'kportal_memhog_free' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/module.c:90:1: warning: symbol 'kportal_memhog_alloc' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/module.c:247:56: warning: incorrect type in argument 3 (different base types)
+drivers/staging/lustre/lustre/libcfs/module.c:247:56:    expected restricted gfp_t [usertype] flags
+drivers/staging/lustre/lustre/libcfs/module.c:247:56:    got unsigned int [unsigned] [usertype] ioc_flags
+drivers/staging/lustre/lustre/libcfs/module.c:317:22: warning: symbol 'libcfs_psdev_ops' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/libcfs/tracefile.c:55:14: warning: symbol 'cfs_trace_thread_mutex' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/tracefile.c:58:10: warning: symbol 'cfs_tage_allocated' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/libcfs/hash.c:119:21: warning: symbol 'cfs_sched_rehash' was not declared. Should it be static?
+drivers/staging/lustre/lustre/libcfs/hash.c:128:1: warning: context imbalance in 'cfs_hash_spin_lock' - wrong count at exit
+drivers/staging/lustre/lustre/libcfs/hash.c:134:1: warning: context imbalance in 'cfs_hash_spin_unlock' - unexpected unlock
+drivers/staging/lustre/lustre/libcfs/hash.c:142:9: warning: context imbalance in 'cfs_hash_rw_lock' - wrong count at exit
+drivers/staging/lustre/lustre/libcfs/hash.c:154:17: warning: context imbalance in 'cfs_hash_rw_unlock' - unexpected unlock
+
+drivers/staging/lustre/lustre/libcfs/libcfs_lock.c:93:1: warning: context imbalance in 'cfs_percpt_lock' - wrong count at exit
+drivers/staging/lustre/lustre/libcfs/libcfs_lock.c:135:28: warning: context imbalance in 'cfs_percpt_unlock' - unexpected unlock
+
+drivers/staging/lustre/lustre/llite/dir.c:655:5: warning: symbol 'll_dir_setdirstripe' was not declared. Should it be static?
+drivers/staging/lustre/lustre/llite/dir.c:1264:24: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1264:24:    expected void const volatile [noderef] <asn:1>*<noident>
+drivers/staging/lustre/lustre/llite/dir.c:1264:24:    got int *<noident>
+drivers/staging/lustre/lustre/llite/dir.c:1278:21: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1278:21:    expected void const volatile [noderef] <asn:1>*<noident>
+drivers/staging/lustre/lustre/llite/dir.c:1278:21:    got int *<noident>
+drivers/staging/lustre/lustre/llite/dir.c:1384:43: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1384:43:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/llite/dir.c:1384:43:    got struct lov_user_md_v1 *lumv1p
+drivers/staging/lustre/lustre/llite/dir.c:1388:52: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1388:52:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/llite/dir.c:1388:52:    got struct lov_user_md_v3 *lumv3p
+drivers/staging/lustre/lustre/llite/dir.c:1408:42: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1408:42:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/llite/dir.c:1408:42:    got struct lmv_user_md_v1 *lump
+drivers/staging/lustre/lustre/llite/dir.c:1434:35: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1434:35:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/llite/dir.c:1434:35:    got void *<noident>
+drivers/staging/lustre/lustre/llite/dir.c:1456:40: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1456:40:    expected char const [noderef] <asn:1>*filename
+drivers/staging/lustre/lustre/llite/dir.c:1456:40:    got char const *<noident>
+drivers/staging/lustre/lustre/llite/dir.c:1489:48: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1489:48:    expected char const [noderef] <asn:1>*filename
+drivers/staging/lustre/lustre/llite/dir.c:1489:48:    got char const *<noident>
+drivers/staging/lustre/lustre/llite/dir.c:1525:34: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1525:34:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/llite/dir.c:1525:34:    got struct lov_user_md_v1 *[assigned] lump
+drivers/staging/lustre/lustre/llite/dir.c:1526:42: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1526:42:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/llite/dir.c:1526:42:    got struct lov_user_md_v1 *[assigned] lump
+drivers/staging/lustre/lustre/llite/dir.c:1552:43: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1552:43:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/llite/dir.c:1552:43:    got struct stat *<noident>
+drivers/staging/lustre/lustre/llite/dir.c:1582:41: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1582:41:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/llite/dir.c:1582:41:    got struct lov_user_md_v1 *[assigned] lum
+drivers/staging/lustre/lustre/llite/dir.c:1624:35: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1624:35:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/llite/dir.c:1624:35:    got struct stat *<noident>
+drivers/staging/lustre/lustre/llite/dir.c:1678:43: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1678:43:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/llite/dir.c:1678:43:    got void *<noident>
+drivers/staging/lustre/lustre/llite/dir.c:1688:43: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1688:43:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/llite/dir.c:1688:43:    got void *<noident>
+drivers/staging/lustre/lustre/llite/dir.c:1714:46: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1714:46:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/llite/dir.c:1714:46:    got void *<noident>
+drivers/staging/lustre/lustre/llite/dir.c:1741:43: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1741:43:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/llite/dir.c:1741:43:    got void *<noident>
+drivers/staging/lustre/lustre/llite/dir.c:1762:43: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1762:43:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/llite/dir.c:1762:43:    got void *<noident>
+drivers/staging/lustre/lustre/llite/dir.c:1769:46: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1769:46:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/llite/dir.c:1769:46:    got void *<noident>
+drivers/staging/lustre/lustre/llite/dir.c:1800:45: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1800:45:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/llite/dir.c:1800:45:    got int *<noident>
+drivers/staging/lustre/lustre/llite/dir.c:1813:35: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1813:35:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/llite/dir.c:1813:35:    got int *<noident>
+drivers/staging/lustre/lustre/llite/dir.c:1819:35: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1819:35:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/llite/dir.c:1819:35:    got void *<noident>
+drivers/staging/lustre/lustre/llite/dir.c:1828:59: warning: incorrect type in argument 3 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1828:59:    expected void const [noderef] <asn:1>*data
+drivers/staging/lustre/lustre/llite/dir.c:1828:59:    got void *<noident>
+drivers/staging/lustre/lustre/llite/dir.c:1832:44: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1832:44:    expected void [noderef] <asn:1>*arg
+drivers/staging/lustre/lustre/llite/dir.c:1832:44:    got void *<noident>
+drivers/staging/lustre/lustre/llite/dir.c:1842:42: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1842:42:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/llite/dir.c:1842:42:    got void *<noident>
+drivers/staging/lustre/lustre/llite/dir.c:1862:42: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1862:42:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/llite/dir.c:1862:42:    got void *<noident>
+drivers/staging/lustre/lustre/llite/dir.c:1898:42: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1898:42:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/llite/dir.c:1898:42:    got void *<noident>
+drivers/staging/lustre/lustre/llite/dir.c:1915:59: warning: incorrect type in argument 3 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1915:59:    expected void const [noderef] <asn:1>*data
+drivers/staging/lustre/lustre/llite/dir.c:1915:59:    got void *<noident>
+drivers/staging/lustre/lustre/llite/dir.c:1926:43: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1926:43:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/llite/dir.c:1926:43:    got char *<noident>
+drivers/staging/lustre/lustre/llite/dir.c:1932:35: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1932:35:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/llite/dir.c:1932:35:    got char *<noident>
+drivers/staging/lustre/lustre/llite/dir.c:1945:43: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1945:43:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/llite/dir.c:1945:43:    got char *<noident>
+drivers/staging/lustre/lustre/llite/dir.c:1951:35: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/dir.c:1951:35:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/llite/dir.c:1951:35:    got char *<noident>
+
+drivers/staging/lustre/lustre/llite/../include/lprocfs_status.h:536:29: warning: context imbalance in 'll_dir_ioctl' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/llite/file.c:423:37: warning: restricted fmode_t degrades to integer
+drivers/staging/lustre/lustre/llite/file.c:496:24: warning: incorrect type in assignment (different base types)
+drivers/staging/lustre/lustre/llite/file.c:496:24:    expected restricted fmode_t [usertype] och_flags
+drivers/staging/lustre/lustre/llite/file.c:496:24:    got unsigned long long [unsigned] [usertype] it_flags
+drivers/staging/lustre/lustre/llite/file.c:526:65: warning: restricted fmode_t degrades to integer
+drivers/staging/lustre/lustre/llite/file.c:526:22: warning: incorrect type in assignment (different base types)
+drivers/staging/lustre/lustre/llite/file.c:526:22:    expected restricted fmode_t [usertype] fd_omode
+drivers/staging/lustre/lustre/llite/file.c:526:22:    got unsigned long long
+drivers/staging/lustre/lustre/llite/file.c:589:38: warning: invalid assignment: |=
+drivers/staging/lustre/lustre/llite/file.c:589:38:    left side has type unsigned long long
+drivers/staging/lustre/lustre/llite/file.c:589:38:    right side has type restricted fmode_t
+drivers/staging/lustre/lustre/llite/file.c:595:49: warning: restricted fmode_t degrades to integer
+drivers/staging/lustre/lustre/llite/file.c:613:28: warning: restricted fmode_t degrades to integer
+drivers/staging/lustre/lustre/llite/file.c:616:35: warning: restricted fmode_t degrades to integer
+drivers/staging/lustre/lustre/llite/file.c:828:23: warning: restricted fmode_t degrades to integer
+drivers/staging/lustre/lustre/llite/file.c:1331:38: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/llite/file.c:1331:38:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/llite/file.c:1331:38:    got struct ll_recreate_obj *<noident>
+drivers/staging/lustre/lustre/llite/file.c:1349:35: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/llite/file.c:1349:35:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/llite/file.c:1349:35:    got struct lu_fid *<noident>
+drivers/staging/lustre/lustre/llite/file.c:1484:62: warning: restricted fmode_t degrades to integer
+drivers/staging/lustre/lustre/llite/file.c:1497:35: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/llite/file.c:1497:35:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/llite/file.c:1497:35:    got struct lov_user_md_v1 *<noident>
+drivers/staging/lustre/lustre/llite/file.c:1516:42: warning: incorrect type in initializer (different base types)
+drivers/staging/lustre/lustre/llite/file.c:1516:42:    expected int [signed] flags
+drivers/staging/lustre/lustre/llite/file.c:1516:42:    got restricted fmode_t [usertype] <noident>
+drivers/staging/lustre/lustre/llite/file.c:1520:35: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/llite/file.c:1520:35:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/llite/file.c:1520:35:    got struct lov_user_md_v1 *lumv1p
+drivers/staging/lustre/lustre/llite/file.c:1525:44: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/llite/file.c:1525:44:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/llite/file.c:1525:44:    got struct lov_user_md_v3 *lumv3p
+drivers/staging/lustre/lustre/llite/file.c:1534:17: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/file.c:1534:17:    expected void const volatile [noderef] <asn:1>*<noident>
+drivers/staging/lustre/lustre/llite/file.c:1534:17:    got unsigned short *<noident>
+drivers/staging/lustre/lustre/llite/file.c:1600:5: warning: symbol 'll_put_grouplock' was not declared. Should it be static?
+drivers/staging/lustre/lustre/llite/file.c:1836:27: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/file.c:1836:27:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/llite/file.c:1836:27:    got void *<noident>
+drivers/staging/lustre/lustre/llite/file.c:2222:24: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/file.c:2222:24:    expected void const volatile [noderef] <asn:1>*<noident>
+drivers/staging/lustre/lustre/llite/file.c:2222:24:    got int *<noident>
+drivers/staging/lustre/lustre/llite/file.c:2229:21: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/file.c:2229:21:    expected void const volatile [noderef] <asn:1>*<noident>
+drivers/staging/lustre/lustre/llite/file.c:2229:21:    got int *<noident>
+drivers/staging/lustre/lustre/llite/file.c:2253:43: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/llite/file.c:2253:43:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/llite/file.c:2253:43:    got char *<noident>
+drivers/staging/lustre/lustre/llite/file.c:2283:24: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/file.c:2283:24:    expected void const volatile [noderef] <asn:1>*<noident>
+drivers/staging/lustre/lustre/llite/file.c:2283:24:    got int *<noident>
+drivers/staging/lustre/lustre/llite/file.c:2300:35: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/file.c:2300:35:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/llite/file.c:2300:35:    got void *<noident>
+drivers/staging/lustre/lustre/llite/file.c:2307:44: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/llite/file.c:2307:44:    expected void [noderef] <asn:1>*arg
+drivers/staging/lustre/lustre/llite/file.c:2307:44:    got void *<noident>
+drivers/staging/lustre/lustre/llite/file.c:2312:43: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/llite/file.c:2312:43:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/llite/file.c:2312:43:    got char *<noident>
+drivers/staging/lustre/lustre/llite/file.c:2318:46: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/file.c:2318:46:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/llite/file.c:2318:46:    got char *<noident>
+drivers/staging/lustre/lustre/llite/file.c:2331:21: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/file.c:2331:21:    expected void const volatile [noderef] <asn:1>*<noident>
+drivers/staging/lustre/lustre/llite/file.c:2331:21:    got int *<noident>
+drivers/staging/lustre/lustre/llite/file.c:2358:35: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/file.c:2358:35:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/llite/file.c:2358:35:    got void *<noident>
+drivers/staging/lustre/lustre/llite/file.c:2373:42: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/llite/file.c:2373:42:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/llite/file.c:2373:42:    got char *<noident>
+drivers/staging/lustre/lustre/llite/file.c:2402:35: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/file.c:2402:35:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/llite/file.c:2402:35:    got char *<noident>
+drivers/staging/lustre/lustre/llite/file.c:2445:47: warning: cast from restricted fmode_t
+drivers/staging/lustre/lustre/llite/file.c:2484:44: warning: incorrect type in assignment (different base types)
+drivers/staging/lustre/lustre/llite/file.c:2484:44:    expected int [signed] [assigned] rc
+drivers/staging/lustre/lustre/llite/file.c:2484:44:    got restricted fmode_t
+drivers/staging/lustre/lustre/llite/file.c:2500:42: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/llite/file.c:2500:42:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/llite/file.c:2500:42:    got void *<noident>
+drivers/staging/lustre/lustre/llite/file.c:3080:55: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/llite/file.c:3080:55:    expected void const *from
+drivers/staging/lustre/lustre/llite/file.c:3080:55:    got struct fiemap_extent [noderef] <asn:1>*fi_extents_start
+drivers/staging/lustre/lustre/llite/file.c:3088:31: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/file.c:3088:31:    expected void *to
+drivers/staging/lustre/lustre/llite/file.c:3088:31:    got struct fiemap_extent [noderef] <asn:1>*fi_extents_start
+
+drivers/staging/lustre/lustre/llite/../include/lprocfs_status.h:536:29: warning: context imbalance in 'll_lov_recreate' - different lock contexts for basic block
+drivers/staging/lustre/lustre/llite/../include/lprocfs_status.h:536:29: warning: context imbalance in 'll_ioctl_fiemap' - different lock contexts for basic block
+drivers/staging/lustre/lustre/llite/../include/lprocfs_status.h:536:29: warning: context imbalance in 'll_fiemap' - different lock contexts for basic block
+drivers/staging/lustre/lustre/llite/../include/lprocfs_status.h:536:29: warning: context imbalance in 'll_layout_fetch' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/llite/llite_lib.c:1929:24: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/llite_lib.c:1929:24:    expected void const volatile [noderef] <asn:1>*<noident>
+drivers/staging/lustre/lustre/llite/llite_lib.c:1929:24:    got int *<noident>
+drivers/staging/lustre/lustre/llite/llite_lib.c:1936:21: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/llite_lib.c:1936:21:    expected void const volatile [noderef] <asn:1>*<noident>
+drivers/staging/lustre/lustre/llite/llite_lib.c:1936:21:    got int *<noident>
+drivers/staging/lustre/lustre/llite/llite_lib.c:2361:27: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/llite_lib.c:2361:27:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/llite/llite_lib.c:2361:27:    got void *<noident>
+
+drivers/staging/lustre/lustre/llite/namei.c:637:52: warning: restricted fmode_t degrades to integer
+
+drivers/staging/lustre/lustre/llite/xattr.c:245:37: warning: incorrect type in initializer (different base types)
+drivers/staging/lustre/lustre/llite/xattr.c:245:37:    expected int [signed] flags
+drivers/staging/lustre/lustre/llite/xattr.c:245:37:    got restricted fmode_t [usertype] <noident>
+
+drivers/staging/lustre/lustre/llite/vvp_dev.c:115:23: warning: symbol 'vvp_key' was not declared. Should it be static?
+drivers/staging/lustre/lustre/llite/vvp_dev.c:121:23: warning: symbol 'vvp_session_key' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/llite/lproc_llite.c:254:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/llite/lproc_llite.c:254:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/llite/lproc_llite.c:254:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/llite/lproc_llite.c:298:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/llite/lproc_llite.c:298:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/llite/lproc_llite.c:298:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/llite/lproc_llite.c:344:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/llite/lproc_llite.c:344:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/llite/lproc_llite.c:344:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/llite/lproc_llite.c:392:40: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/lproc_llite.c:392:40:    expected char const *buffer
+drivers/staging/lustre/lustre/llite/lproc_llite.c:392:40:    got char const [noderef] <asn:1>*[assigned] buffer
+drivers/staging/lustre/lustre/llite/lproc_llite.c:498:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/llite/lproc_llite.c:498:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/llite/lproc_llite.c:498:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/llite/lproc_llite.c:519:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/llite/lproc_llite.c:519:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/llite/lproc_llite.c:519:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/llite/lproc_llite.c:565:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/llite/lproc_llite.c:565:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/llite/lproc_llite.c:565:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/llite/lproc_llite.c:578:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/llite/lproc_llite.c:578:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/llite/lproc_llite.c:578:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/llite/lproc_llite.c:591:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/llite/lproc_llite.c:591:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/llite/lproc_llite.c:591:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/llite/lproc_llite.c:620:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/llite/lproc_llite.c:620:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/llite/lproc_llite.c:620:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/llite/lproc_llite.c:649:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/llite/lproc_llite.c:649:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/llite/lproc_llite.c:649:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/llite/lproc_llite.c:693:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/llite/lproc_llite.c:693:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/llite/lproc_llite.c:693:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/llite/lproc_llite.c:812:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/llite/lproc_llite.c:812:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/llite/lproc_llite.c:812:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/llite/lproc_llite.c:1199:35: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/lproc_llite.c:1199:35:    expected char const *buffer
+drivers/staging/lustre/lustre/llite/lproc_llite.c:1199:35:    got char const [noderef] <asn:1>*buf
+drivers/staging/lustre/lustre/llite/lproc_llite.c:1273:35: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/lproc_llite.c:1273:35:    expected char const *buffer
+drivers/staging/lustre/lustre/llite/lproc_llite.c:1273:35:    got char const [noderef] <asn:1>*buf
+drivers/staging/lustre/lustre/llite/lproc_llite.c:1476:35: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/lproc_llite.c:1476:35:    expected char const *buffer
+drivers/staging/lustre/lustre/llite/lproc_llite.c:1476:35:    got char const [noderef] <asn:1>*buf
+drivers/staging/lustre/lustre/llite/lproc_llite.c:914:51: warning: dereference of noderef expression
+
+drivers/staging/lustre/lustre/llite/lloop.c:635:35: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/lloop.c:635:35:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/llite/lloop.c:635:35:    got struct lu_fid *<noident>
+drivers/staging/lustre/lustre/llite/lloop.c:708:21: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/llite/lloop.c:708:21:    expected void const volatile [noderef] <asn:1>*<noident>
+drivers/staging/lustre/lustre/llite/lloop.c:708:21:    got long *<noident>
+
+drivers/staging/lustre/lustre/lmv/lmv_obd.c:131:17: warning: symbol 'lmv_get_uuid' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lmv/lmv_obd.c:338:5: warning: symbol 'lmv_connect_mdc' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lmv/lmv_obd.c:940:38: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/lmv/lmv_obd.c:940:38:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/lmv/lmv_obd.c:940:38:    got char *ioc_pbuf2
+drivers/staging/lustre/lustre/lmv/lmv_obd.c:950:38: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/lmv/lmv_obd.c:950:38:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/lmv/lmv_obd.c:950:38:    got char *ioc_pbuf1
+drivers/staging/lustre/lustre/lmv/lmv_obd.c:1670:5: warning: symbol 'lmv_create' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lmv/lmv_obd.c:2395:5: warning: symbol 'lmv_set_info_async' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lmv/lmv_obd.c:2433:5: warning: symbol 'lmv_packmd' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lmv/lmv_obd.c:2481:5: warning: symbol 'lmv_unpackmd' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lmv/lmv_obd.c:2559:5: warning: symbol 'lmv_set_lock_data' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lmv/lmv_obd.c:2569:13: warning: symbol 'lmv_lock_match' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lmv/lmv_obd.c:2602:5: warning: symbol 'lmv_get_lustre_md' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lmv/lmv_obd.c:2611:5: warning: symbol 'lmv_free_lustre_md' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lmv/lmv_obd.c:2621:5: warning: symbol 'lmv_set_open_replay_data' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lmv/lmv_obd.c:2636:5: warning: symbol 'lmv_clear_open_replay_data' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lmv/lmv_obd.c:2692:5: warning: symbol 'lmv_unpack_capa' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lmv/lmv_obd.c:2700:5: warning: symbol 'lmv_intent_getattr_async' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lmv/lmv_obd.c:2722:5: warning: symbol 'lmv_revalidate_lock' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lmv/lmv_obd.c:2747:5: warning: symbol 'lmv_quotactl' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lmv/lmv_obd.c:2794:5: warning: symbol 'lmv_quotacheck' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lmv/lmv_obd.c:2818:16: warning: symbol 'lmv_obd_ops' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lmv/lmv_obd.c:2838:15: warning: symbol 'lmv_md_ops' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lmv/lmv_obd.c:2872:12: warning: symbol 'lmv_init' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/lmv/../include/lprocfs_status.h:536:29: warning: context imbalance in 'lmv_iocontrol' - different lock contexts for basic block
+drivers/staging/lustre/lustre/lmv/../include/lprocfs_status.h:536:29: warning: context imbalance in 'lmv_packmd' - different lock contexts for basic block
+drivers/staging/lustre/lustre/lmv/../include/lprocfs_status.h:536:29: warning: context imbalance in 'lmv_unpackmd' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/lmv/lproc_lmv.c:178:23: warning: symbol 'lmv_tgt_sops' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lmv/lproc_lmv.c:202:21: warning: symbol 'lprocfs_lmv_obd_vars' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lmv/lproc_lmv.c:218:24: warning: symbol 'lmv_proc_target_fops' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lmv/lproc_lmv.c:226:6: warning: symbol 'lprocfs_lmv_init_vars' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/lov/lov_obd.c:1432:38: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/lov/lov_obd.c:1432:38:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/lov/lov_obd.c:1432:38:    got char *ioc_pbuf2
+drivers/staging/lustre/lustre/lov/lov_obd.c:1444:38: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/lov/lov_obd.c:1444:38:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/lov/lov_obd.c:1444:38:    got char *ioc_pbuf1
+drivers/staging/lustre/lustre/lov/lov_obd.c:1490:35: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/lov/lov_obd.c:1490:35:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/lov/lov_obd.c:1490:35:    got void *<noident>
+drivers/staging/lustre/lustre/lov/lov_obd.c:1609:5: warning: symbol 'fiemap_calc_fm_end_offset' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lov/lov_obd.c:1666:5: warning: symbol 'fiemap_calc_last_stripe' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lov/lov_obd.c:1702:6: warning: symbol 'fiemap_prepare_and_copy_exts' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lov/lov_obd.c:2298:16: warning: symbol 'lov_obd_ops' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lov/lov_obd.c:2332:12: warning: symbol 'lov_init' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/lov/../include/lprocfs_status.h:536:29: warning: context imbalance in 'lov_fiemap' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/lov/lov_pack.c:438:34: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/lov/lov_pack.c:438:34:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/lov/lov_pack.c:438:34:    got struct lov_user_md_v1 *lump
+drivers/staging/lustre/lustre/lov/lov_pack.c:452:35: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/lov/lov_pack.c:452:35:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/lov/lov_pack.c:452:35:    got struct lov_user_md_v1 *lump
+drivers/staging/lustre/lustre/lov/lov_pack.c:505:26: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/lov/lov_pack.c:505:26:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/lov/lov_pack.c:505:26:    got struct lov_user_md_v1 *lump
+
+drivers/staging/lustre/lustre/lov/../include/lprocfs_status.h:536:29: warning: context imbalance in 'lov_packmd' - different lock contexts for basic block
+drivers/staging/lustre/lustre/lov/../include/lprocfs_status.h:536:29: warning: context imbalance in 'lov_verify_lmm' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/lov/lov_ea.c:212:5: warning: symbol 'lsm_unpackmd_v1' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lov/lov_ea.c:290:5: warning: symbol 'lsm_unpackmd_v3' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/lov/../include/lprocfs_status.h:536:29: warning: context imbalance in 'lsm_alloc_plain' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/lov/lov_dev.c:63:23: warning: symbol 'cl_lov_device_mutex_class' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/lov/lov_object.c:566:22: warning: symbol 'lov_type' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lov/lov_object.c:933:22: warning: symbol 'lov_lsm_get' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lov/lov_object.c:949:6: warning: symbol 'lov_lsm_put' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lov/lov_object.c:956:5: warning: symbol 'lov_read_and_clear_async_rc' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/lov/../include/linux/../lprocfs_status.h:536:29: warning: context imbalance in 'lov_init_raid0' - different lock contexts for basic block
+drivers/staging/lustre/lustre/lov/../include/linux/../lprocfs_status.h:536:29: warning: context imbalance in 'lov_lock_sub_init' - different lock contexts for basic block
+drivers/staging/lustre/lustre/lov/../include/linux/../lprocfs_status.h:536:29: warning: context imbalance in 'lov_io_subio_init' - different lock contexts for basic block
+drivers/staging/lustre/lustre/lov/../include/linux/../lprocfs_status.h:536:29: warning: context imbalance in 'lov_io_submit' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/lov/lov_pool.c:74:6: warning: symbol 'lov_pool_putref_locked' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/lov/lproc_lov.c:72:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/lov/lproc_lov.c:72:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/lov/lproc_lov.c:72:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/lov/lproc_lov.c:101:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/lov/lproc_lov.c:101:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/lov/lproc_lov.c:101:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/lov/lproc_lov.c:130:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/lov/lproc_lov.c:130:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/lov/lproc_lov.c:130:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/lov/lproc_lov.c:160:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/lov/lproc_lov.c:160:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/lov/lproc_lov.c:160:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/lov/lproc_lov.c:232:23: warning: symbol 'lov_tgt_sops' was not declared. Should it be static?
+drivers/staging/lustre/lustre/lov/lproc_lov.c:261:21: warning: symbol 'lprocfs_lov_obd_vars' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/mdc/mdc_request.c:63:5: warning: symbol 'mdc_unpack_capa' was not declared. Should it be static?
+drivers/staging/lustre/lustre/mdc/mdc_request.c:150:5: warning: symbol 'mdc_getstatus' was not declared. Should it be static?
+drivers/staging/lustre/lustre/mdc/mdc_request.c:217:5: warning: symbol 'mdc_getattr' was not declared. Should it be static?
+drivers/staging/lustre/lustre/mdc/mdc_request.c:261:5: warning: symbol 'mdc_getattr_name' was not declared. Should it be static?
+drivers/staging/lustre/lustre/mdc/mdc_request.c:444:5: warning: symbol 'mdc_setxattr' was not declared. Should it be static?
+drivers/staging/lustre/lustre/mdc/mdc_request.c:455:5: warning: symbol 'mdc_getxattr' was not declared. Should it be static?
+drivers/staging/lustre/lustre/mdc/mdc_request.c:858:5: warning: symbol 'mdc_close' was not declared. Should it be static?
+drivers/staging/lustre/lustre/mdc/mdc_request.c:977:5: warning: symbol 'mdc_done_writing' was not declared. Should it be static?
+drivers/staging/lustre/lustre/mdc/mdc_request.c:1047:5: warning: symbol 'mdc_readpage' was not declared. Should it be static?
+drivers/staging/lustre/lustre/mdc/mdc_request.c:1910:38: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/mdc/mdc_request.c:1910:38:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/mdc/mdc_request.c:1910:38:    got char *ioc_pbuf2
+drivers/staging/lustre/lustre/mdc/mdc_request.c:1923:38: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/mdc/mdc_request.c:1923:38:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/mdc/mdc_request.c:1923:38:    got char *ioc_pbuf1
+drivers/staging/lustre/lustre/mdc/mdc_request.c:1955:34: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/mdc/mdc_request.c:1955:34:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/mdc/mdc_request.c:1955:34:    got void *uarg
+drivers/staging/lustre/lustre/mdc/mdc_request.c:1977:5: warning: symbol 'mdc_get_info_rpc' was not declared. Should it be static?
+drivers/staging/lustre/lustre/mdc/mdc_request.c:2151:5: warning: symbol 'mdc_set_info_async' was not declared. Should it be static?
+drivers/staging/lustre/lustre/mdc/mdc_request.c:2202:5: warning: symbol 'mdc_get_info' was not declared. Should it be static?
+drivers/staging/lustre/lustre/mdc/mdc_request.c:2266:5: warning: symbol 'mdc_sync' was not declared. Should it be static?
+drivers/staging/lustre/lustre/mdc/mdc_request.c:2359:17: warning: symbol 'mdc_get_uuid' was not declared. Should it be static?
+drivers/staging/lustre/lustre/mdc/mdc_request.c:2393:26: warning: symbol 'inode_lvbo' was not declared. Should it be static?
+drivers/staging/lustre/lustre/mdc/mdc_request.c:2553:5: warning: symbol 'mdc_get_remote_perm' was not declared. Should it be static?
+drivers/staging/lustre/lustre/mdc/mdc_request.c:2650:16: warning: symbol 'mdc_obd_ops' was not declared. Should it be static?
+drivers/staging/lustre/lustre/mdc/mdc_request.c:2673:15: warning: symbol 'mdc_md_ops' was not declared. Should it be static?
+drivers/staging/lustre/lustre/mdc/mdc_request.c:2708:12: warning: symbol 'mdc_init' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/mdc/mdc_lib.c:180:47: warning: restricted fmode_t degrades to integer
+drivers/staging/lustre/lustre/mdc/mdc_lib.c:198:21: warning: restricted fmode_t degrades to integer
+
+drivers/staging/lustre/lustre/mdc/mdc_locks.c:292:44: warning: restricted fmode_t degrades to integer
+drivers/staging/lustre/lustre/mdc/mdc_locks.c:297:45: warning: restricted fmode_t degrades to integer
+drivers/staging/lustre/lustre/mdc/mdc_locks.c:300:49: warning: restricted fmode_t degrades to integer
+
+drivers/staging/lustre/lustre/mdc/../include/linux/../lprocfs_status.h:536:29: warning: context imbalance in 'mdc_finish_enqueue' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/mdc/lproc_mdc.c:77:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/mdc/lproc_mdc.c:77:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/mdc/lproc_mdc.c:77:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/mdc/lproc_mdc.c:148:27: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/mdc/lproc_mdc.c:148:27:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/mdc/lproc_mdc.c:148:27:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/mdc/lproc_mdc.c:146:24: warning: symbol 'mdc_kuc_fops' was not declared. Should it be static?
+drivers/staging/lustre/lustre/mdc/lproc_mdc.c:152:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/mdc/lproc_mdc.c:152:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/mdc/lproc_mdc.c:152:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/mdc/lproc_mdc.c:173:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/mdc/lproc_mdc.c:173:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/mdc/lproc_mdc.c:173:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/mdc/lproc_mdc.c:174:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/mdc/lproc_mdc.c:174:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/mdc/lproc_mdc.c:174:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/mdc/lproc_mdc.c:212:6: warning: symbol 'lprocfs_mdc_init_vars' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/mgc/mgc_request.c:98:5: warning: symbol 'mgc_logname2resid' was not declared. Should it be static?
+drivers/staging/lustre/lustre/mgc/mgc_request.c:380:1: warning: symbol 'llog_process_lock' was not declared. Should it be static?
+drivers/staging/lustre/lustre/mgc/mgc_request.c:957:5: warning: symbol 'mgc_set_info_async' was not declared. Should it be static?
+drivers/staging/lustre/lustre/mgc/mgc_request.c:1719:16: warning: symbol 'mgc_obd_ops' was not declared. Should it be static?
+drivers/staging/lustre/lustre/mgc/mgc_request.c:1736:12: warning: symbol 'mgc_init' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/mgc/lproc_mgc.c:50:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/mgc/lproc_mgc.c:50:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/mgc/lproc_mgc.c:50:1:    got long ( static [toplevel] *<noident> )( ... )
+
+drivers/staging/lustre/lustre/obdclass/linux/linux-module.c:76:5: warning: symbol 'proc_version' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/linux/linux-module.c:86:37: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/obdclass/linux/linux-module.c:86:37:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/obdclass/linux/linux-module.c:86:37:    got void *<noident>
+drivers/staging/lustre/lustre/obdclass/linux/linux-module.c:120:37: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/obdclass/linux/linux-module.c:120:37:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/obdclass/linux/linux-module.c:120:37:    got void *<noident>
+drivers/staging/lustre/lustre/obdclass/linux/linux-module.c:161:28: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/obdclass/linux/linux-module.c:161:28:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/obdclass/linux/linux-module.c:161:28:    got void *arg
+drivers/staging/lustre/lustre/obdclass/linux/linux-module.c:208:19: warning: symbol 'obd_psdev' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/linux/linux-module.c:216:5: warning: symbol 'obd_proc_version_seq_show' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/linux/linux-module.c:224:5: warning: symbol 'obd_proc_pinger_seq_show' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/linux/linux-module.c:284:43: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/obdclass/linux/linux-module.c:284:43:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/obdclass/linux/linux-module.c:284:43:    got char const *buffer
+drivers/staging/lustre/lustre/obdclass/linux/linux-module.c:293:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/obdclass/linux/linux-module.c:293:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/obdclass/linux/linux-module.c:293:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/obdclass/linux/linux-module.c:324:21: warning: symbol 'lprocfs_base' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/linux/linux-module.c:382:23: warning: symbol 'obd_device_list_sops' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/linux/linux-module.c:403:24: warning: symbol 'obd_device_list_fops' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/linux/linux-module.c:411:5: warning: symbol 'class_procfs_init' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/linux/linux-module.c:431:5: warning: symbol 'class_procfs_clean' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/obdclass/linux/../../include/lprocfs_status.h:536:29: warning: context imbalance in 'obd_ioctl_getdata' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/obdclass/linux/linux-sysctl.c:199:48: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/obdclass/linux/linux-sysctl.c:199:48:    expected char const *buffer
+drivers/staging/lustre/lustre/obdclass/linux/linux-sysctl.c:199:48:    got void [noderef] <asn:1>*buffer
+drivers/staging/lustre/lustre/obdclass/linux/linux-sysctl.c:241:48: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/obdclass/linux/linux-sysctl.c:241:48:    expected char const *buffer
+drivers/staging/lustre/lustre/obdclass/linux/linux-sysctl.c:241:48:    got void [noderef] <asn:1>*buffer
+drivers/staging/lustre/lustre/obdclass/linux/linux-sysctl.c:391:6: warning: symbol 'obd_sysctl_init' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/linux/linux-sysctl.c:399:6: warning: symbol 'obd_sysctl_clean' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/obdclass/linux/../../include/lprocfs_status.h:536:29: warning: context imbalance in 'proc_memory_alloc' - different lock contexts for basic block
+drivers/staging/lustre/lustre/obdclass/linux/../../include/lprocfs_status.h:536:29: warning: context imbalance in 'proc_pages_alloc' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/obdclass/llog_cat.c:530:5: warning: symbol 'llog_cat_process_cb' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/llog_cat.c:695:5: warning: symbol 'llog_cat_set_first_idx' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/llog_cat.c:755:5: warning: symbol 'cat_cancel_cb' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/llog_cat.c:112:20: warning: context imbalance in 'llog_cat_new_log' - unexpected unlock
+
+drivers/staging/lustre/lustre/obdclass/class_obd.c:53:18: warning: symbol 'obd_types' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/class_obd.c:56:7: warning: symbol 'obd_max_pages' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/class_obd.c:58:7: warning: symbol 'obd_max_alloc' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/class_obd.c:60:7: warning: symbol 'obd_alloc' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/class_obd.c:62:7: warning: symbol 'obd_pages' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/class_obd.c:64:1: warning: symbol 'obd_updatemax_lock' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/class_obd.c:173:5: warning: symbol 'class_resolve_dev_name' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/class_obd.c:241:48: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/obdclass/class_obd.c:241:48:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/obdclass/class_obd.c:241:48:    got char *ioc_pbuf1
+drivers/staging/lustre/lustre/obdclass/class_obd.c:445:5: warning: symbol 'obd_init_checks' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/obdclass/../include/lprocfs_status.h:536:29: warning: context imbalance in 'obd_alloc_fail' - different lock contexts for basic block
+drivers/staging/lustre/lustre/obdclass/../include/lprocfs_status.h:536:29: warning: context imbalance in 'obd_update_maxusage' - different lock contexts for basic block
+drivers/staging/lustre/lustre/obdclass/../include/lprocfs_status.h:536:29: warning: context imbalance in 'cleanup_obdclass' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/obdclass/genops.c:47:12: warning: symbol 'obd_types_lock' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/genops.c:49:19: warning: symbol 'obd_device_cachep' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/genops.c:52:19: warning: symbol 'import_cachep' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/genops.c:54:23: warning: symbol 'obd_zombie_imports' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/genops.c:55:23: warning: symbol 'obd_zombie_exports' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/genops.c:56:13: warning: symbol 'obd_zombie_impexp_lock' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/genops.c:933:6: warning: symbol 'class_import_destroy' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/genops.c:1131:6: warning: symbol 'class_export_recovery_cleanup' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/obdclass/lprocfs_status.c:188:37: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/obdclass/lprocfs_status.c:188:37:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/obdclass/lprocfs_status.c:188:37:    got char const *buffer
+drivers/staging/lustre/lustre/obdclass/lprocfs_status.c:424:35: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/obdclass/lprocfs_status.c:424:35:    expected char const *buffer
+drivers/staging/lustre/lustre/obdclass/lprocfs_status.c:424:35:    got char const [noderef] <asn:1>*buffer
+drivers/staging/lustre/lustre/obdclass/lprocfs_status.c:1259:24: warning: symbol 'lprocfs_stats_seq_fops' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/lprocfs_status.c:1541:5: warning: symbol 'lprocfs_exp_print_uuid' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/lprocfs_status.c:1572:5: warning: symbol 'lprocfs_exp_print_hash' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/lprocfs_status.c:1871:37: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/obdclass/lprocfs_status.c:1871:37:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/obdclass/lprocfs_status.c:1871:37:    got char const *buffer
+drivers/staging/lustre/lustre/obdclass/lprocfs_status.c:628:29: warning: context imbalance in 'lprocfs_stats_collect' - different lock contexts for basic block
+drivers/staging/lustre/lustre/obdclass/lprocfs_status.c:1162:29: warning: context imbalance in 'lprocfs_clear_stats' - different lock contexts for basic block
+drivers/staging/lustre/lustre/obdclass/lprocfs_status.c:1315:29: warning: context imbalance in 'lprocfs_counter_init' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/obdclass/../include/lprocfs_status.h:536:29: warning: context imbalance in 'class_handle_init' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/obdclass/lustre_handles.c:252:9: warning: memset with byte count of 5767168
+
+drivers/staging/lustre/lustre/obdclass/obdo.c:160:5: warning: symbol 'obdo_cmp_md' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/obdclass/obd_config.c:807:5: warning: symbol 'class_del_conn' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/obd_config.c:836:1: warning: symbol 'lustre_profile_list' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/obd_config.c:855:5: warning: symbol 'class_add_profile' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/obd_config.c:970:6: warning: symbol 'lustre_register_client_process_config' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/obd_config.c:1088:6: warning: symbol 'lustre_register_quota_process_config' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/obd_config.c:1342:76: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/obdclass/obd_config.c:1342:76:    expected char const [noderef] <asn:1>*<noident>
+drivers/staging/lustre/lustre/obdclass/obd_config.c:1342:76:    got char *[assigned] sval
+
+drivers/staging/lustre/lustre/obdclass/obd_mount.c:203:1: warning: symbol 'mgc_start_lock' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/obd_mount.c:556:23: warning: symbol 'lustre_init_lsi' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/obd_mount.c:817:5: warning: symbol 'lustre_check_exclusion' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/obd_mount.c:1198:5: warning: symbol 'lustre_fill_super' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/obd_mount.c:1289:15: warning: symbol 'lustre_mount' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/obd_mount.c:1300:6: warning: symbol 'lustre_kill_super' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/obd_mount.c:1312:25: warning: symbol 'lustre_fs_type' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/obd_mount.c:1322:5: warning: symbol 'lustre_register_fs' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/obd_mount.c:1327:5: warning: symbol 'lustre_unregister_fs' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/obdclass/lu_object.c:430:23: warning: symbol 'lu_global_key' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/lu_object.c:945:16: warning: symbol 'lu_site_hash_ops' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/lu_object.c:1693:7: warning: symbol 'lu_context_tags_default' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/lu_object.c:1694:7: warning: symbol 'lu_session_tags_default' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/lu_object.c:1915:15: warning: symbol 'lu_debugging_env' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/lu_object.c:1920:5: warning: symbol 'lu_printk_printer' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/lu_object.c:68:6: warning: context imbalance in 'lu_object_put' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/obdclass/../include/lprocfs_status.h:536:29: warning: context imbalance in 'lu_buf_alloc' - different lock contexts for basic block
+drivers/staging/lustre/lustre/obdclass/../include/lprocfs_status.h:536:29: warning: context imbalance in 'lu_buf_check_and_grow' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/obdclass/cl_object.c:389:5: warning: symbol 'cache_stats_print' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/cl_object.c:195:6: warning: context imbalance in 'cl_object_attr_lock' - wrong count at exit
+drivers/staging/lustre/lustre/obdclass/cl_object.c:204:6: warning: context imbalance in 'cl_object_attr_unlock' - unexpected unlock
+
+drivers/staging/lustre/lustre/obdclass/cl_page.c:810:6: warning: symbol 'cl_page_disown0' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/cl_page.c:1546:6: warning: symbol 'cl_page_init' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/cl_page.c:1551:6: warning: symbol 'cl_page_fini' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/cl_page.c:243:28: warning: context imbalance in 'cl_page_gang_lookup' - unexpected unlock
+
+drivers/staging/lustre/lustre/obdclass/cl_lock.c:2232:5: warning: symbol 'cl_lock_init' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdclass/cl_lock.c:2237:6: warning: symbol 'cl_lock_fini' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/obdclass/lprocfs_counters.c:47:6: warning: context imbalance in 'lprocfs_counter_add' - different lock contexts for basic block
+drivers/staging/lustre/lustre/obdclass/lprocfs_counters.c:98:6: warning: context imbalance in 'lprocfs_counter_sub' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/obdecho/echo_client.c:1260:27: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/obdecho/echo_client.c:1260:27:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/obdecho/echo_client.c:1260:27:    got struct lov_stripe_md *ulsm
+drivers/staging/lustre/lustre/obdecho/echo_client.c:1264:50: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/obdecho/echo_client.c:1264:50:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/obdecho/echo_client.c:1264:50:    got struct lov_oinfo *<noident>
+drivers/staging/lustre/lustre/obdecho/echo_client.c:1281:34: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/obdecho/echo_client.c:1281:34:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/obdecho/echo_client.c:1281:34:    got void *ulsm
+drivers/staging/lustre/lustre/obdecho/echo_client.c:1294:49: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/obdecho/echo_client.c:1294:49:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/obdecho/echo_client.c:1294:49:    got struct lov_oinfo *<noident>
+drivers/staging/lustre/lustre/obdecho/echo_client.c:2103:5: warning: symbol 'echo_client_init' was not declared. Should it be static?
+drivers/staging/lustre/lustre/obdecho/echo_client.c:2122:6: warning: symbol 'echo_client_exit' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/obdecho/../include/linux/../lprocfs_status.h:536:29: warning: context imbalance in 'echo_client_kbrw' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/osc/osc_request.c:2606:34: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/osc/osc_request.c:2606:34:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/osc/osc_request.c:2606:34:    got struct lov_user_md_v1 *lump
+drivers/staging/lustre/lustre/osc/osc_request.c:2640:26: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/osc/osc_request.c:2640:26:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/osc/osc_request.c:2640:26:    got struct lov_user_md_v1 *lump
+drivers/staging/lustre/lustre/osc/osc_request.c:2699:37: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/osc/osc_request.c:2699:37:    expected void [noderef] <asn:1>*to
+drivers/staging/lustre/lustre/osc/osc_request.c:2699:37:    got void *<noident>
+drivers/staging/lustre/lustre/osc/osc_request.c:3308:16: warning: symbol 'osc_obd_ops' was not declared. Should it be static?
+drivers/staging/lustre/lustre/osc/osc_request.c:3342:12: warning: symbol 'osc_init' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/osc/osc_dev.c:60:22: warning: symbol 'osc_caches' was not declared. Should it be static?
+drivers/staging/lustre/lustre/osc/osc_dev.c:101:23: warning: symbol 'osc_ast_guard_class' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/osc/osc_object.c:163:5: warning: symbol 'osc_attr_set' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/osc/osc_page.c:442:6: warning: symbol 'osc_page_clip' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/osc/osc_cache.c:586:19: warning: symbol 'osc_extent_find' was not declared. Should it be static?
+drivers/staging/lustre/lustre/osc/osc_cache.c:1379:6: warning: symbol 'osc_unreserve_grant' was not declared. Should it be static?
+drivers/staging/lustre/lustre/osc/osc_cache.c:1913:26: warning: context imbalance in 'osc_send_write_rpc' - unexpected unlock
+drivers/staging/lustre/lustre/osc/osc_cache.c:1978:34: warning: context imbalance in 'osc_send_read_rpc' - unexpected unlock
+drivers/staging/lustre/lustre/osc/osc_cache.c:2085:34: warning: context imbalance in 'osc_check_rpcs' - unexpected unlock
+
+drivers/staging/lustre/lustre/osc/lproc_osc.c:76:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/osc/lproc_osc.c:76:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:76:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:116:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/osc/lproc_osc.c:116:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:116:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:157:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/osc/lproc_osc.c:157:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:157:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:196:40: warning: incorrect type in argument 1 (different address spaces)
+drivers/staging/lustre/lustre/osc/lproc_osc.c:196:40:    expected char const *buffer
+drivers/staging/lustre/lustre/osc/lproc_osc.c:196:40:    got char const [noderef] <asn:1>*[assigned] buffer
+drivers/staging/lustre/lustre/osc/lproc_osc.c:267:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/osc/lproc_osc.c:267:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:267:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:312:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/osc/lproc_osc.c:312:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:312:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:342:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/osc/lproc_osc.c:342:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:342:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:378:37: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/osc/lproc_osc.c:378:37:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/osc/lproc_osc.c:378:37:    got char const *buffer
+drivers/staging/lustre/lustre/osc/lproc_osc.c:395:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/osc/lproc_osc.c:395:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:395:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:421:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/osc/lproc_osc.c:421:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:421:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:440:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/osc/lproc_osc.c:440:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:440:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:459:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/osc/lproc_osc.c:459:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:459:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:507:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/osc/lproc_osc.c:507:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:507:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:522:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/osc/lproc_osc.c:522:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:522:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:524:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/osc/lproc_osc.c:524:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:524:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:525:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/osc/lproc_osc.c:525:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:525:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:684:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/osc/lproc_osc.c:684:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:684:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:716:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/osc/lproc_osc.c:716:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/osc/lproc_osc.c:716:1:    got long ( static [toplevel] *<noident> )( ... )
+
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/l_lock.c:57:17: warning: context imbalance in 'lock_res_and_lock' - wrong count at exit
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/l_lock.c:67:6: warning: context imbalance in 'unlock_res_and_lock' - unexpected unlock
+
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_lock.c:330:5: warning: symbol 'ldlm_lock_destroy_internal' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_lock.c:419:27: warning: symbol 'lock_handle_ops' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_lock.c:630:6: warning: symbol 'ldlm_add_bl_work_item' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_lock.c:651:6: warning: symbol 'ldlm_add_cp_work_item' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_lock.c:2019:5: warning: symbol 'ldlm_cancel_locks_for_export_cb' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_lock.c:485:5: warning: context imbalance in 'ldlm_lock_change_resource' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_resource.c:48:19: warning: symbol 'ldlm_resource_slab' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_resource.c:48:40: warning: symbol 'ldlm_lock_slab' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_resource.c:65:23: warning: symbol 'ldlm_ns_proc_dir' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_resource.c:72:14: warning: symbol 'ldlm_dump_granted_max' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_resource.c:82:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_resource.c:82:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_resource.c:82:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_resource.c:84:1: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_resource.c:84:1:    expected char const [noderef] <asn:1>*buffer
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_resource.c:84:1:    got char const *buffer
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_resource.c:84:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_resource.c:84:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_resource.c:84:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_resource.c:297:36: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_resource.c:297:36:    expected char const [noderef] <asn:1>*buffer
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_resource.c:297:36:    got char const *buffer
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_resource.c:307:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_resource.c:307:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_resource.c:307:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_resource.c:309:6: warning: symbol 'ldlm_namespace_proc_unregister' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_resource.c:329:5: warning: symbol 'ldlm_namespace_proc_register' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_resource.c:482:16: warning: symbol 'ldlm_ns_hash_ops' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_resource.c:493:16: warning: symbol 'ldlm_ns_fid_hash_ops' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_resource.c:514:20: warning: symbol 'ldlm_ns_hash_defs' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_resource.c:944:5: warning: symbol 'ldlm_namespace_get_return' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/../include/lprocfs_status.h:536:29: warning: context imbalance in 'lprocfs_ns_locks_seq_show' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_resource.c:1205:5: warning: context imbalance in 'ldlm_resource_putref' - wrong count at exit
+
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_lib.c:659:5: warning: symbol 'target_send_reply_msg' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_request.c:75:14: warning: symbol 'ldlm_cancel_unused_locks_before_replay' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_pool.c:698:1: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_pool.c:698:1:    expected char const [noderef] <asn:1>*buffer
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_pool.c:698:1:    got char const *buffer
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_pool.c:706:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_pool.c:706:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_pool.c:706:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_pool.c:710:1: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_pool.c:710:1:    expected char const [noderef] <asn:1>*buffer
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_pool.c:710:1:    got char const *buffer
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_pool.c:710:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_pool.c:710:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/ptlrpc/../../lustre/ldlm/ldlm_pool.c:710:1:    got long ( static [toplevel] *<noident> )( ... )
+
+drivers/staging/lustre/lustre/ptlrpc/client.c:382:19: warning: symbol 'request_cache' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/client.c:332:12: warning: context imbalance in 'ptlrpc_at_recv_early_reply' - unexpected unlock
+
+drivers/staging/lustre/lustre/ptlrpc/../include/lprocfs_status.h:536:29: warning: context imbalance in 'ptlrpc_add_rqs_to_pool' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/ptlrpc/client.c:2238:36: warning: context imbalance in '__ptlrpc_free_req' - unexpected unlock
+
+drivers/staging/lustre/lustre/ptlrpc/pack_generic.c:273:27: warning: symbol 'lustre_get_emerg_rs' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/pack_generic.c:310:6: warning: symbol 'lustre_put_emerg_rs' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/pack_generic.c:440:5: warning: symbol 'lustre_shrink_msg_v2' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/pack_generic.c:642:5: warning: symbol 'lustre_unpack_req_ptlrpc_body' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/pack_generic.c:654:5: warning: symbol 'lustre_unpack_rep_ptlrpc_body' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/pack_generic.c:2008:6: warning: symbol 'lustre_swab_fiemap_extent' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/pack_generic.c:2487:6: warning: symbol 'lustre_swab_hsm_extent' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/ptlrpc/events.c:489:6: warning: symbol 'ptlrpc_ni_fini' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/events.c:533:5: warning: symbol 'ptlrpc_ni_init' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/ptlrpc/ptlrpc_module.c:54:12: warning: symbol 'ptlrpc_init' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/ptlrpc/service.c:68:1: warning: symbol 'ptlrpc_all_services' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/service.c:72:35: warning: symbol 'ptlrpc_alloc_rqbd' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/service.c:103:1: warning: symbol 'ptlrpc_free_rqbd' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/service.c:120:1: warning: symbol 'ptlrpc_grow_req_bufs' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/service.c:3070:5: warning: symbol 'ptlrpc_svcpt_health_check' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/ptlrpc/../include/lprocfs_status.h:536:29: warning: context imbalance in 'ptlrpc_alloc_rqbd' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/ptlrpc/service.c:330:25: warning: context imbalance in 'rs_batch_add' - unexpected unlock
+drivers/staging/lustre/lustre/ptlrpc/service.c:357:17: warning: context imbalance in 'rs_batch_fini' - unexpected unlock
+
+drivers/staging/lustre/lustre/ptlrpc/../include/lprocfs_status.h:536:29: warning: context imbalance in 'ptlrpc_at_send_early_reply' - different lock contexts for basic block
+drivers/staging/lustre/lustre/ptlrpc/../include/lprocfs_status.h:536:29: warning: context imbalance in 'ptlrpc_main' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/ptlrpc/pinger.c:51:14: warning: symbol 'pinger_mutex' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/pinger.c:94:5: warning: symbol 'ptlrpc_ping' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/pinger.c:113:6: warning: symbol 'ptlrpc_update_next_ping' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/pinger.c:144:6: warning: symbol 'pinger_check_timeout' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/pinger.c:431:20: warning: symbol 'ptlrpc_new_timeout' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/pinger.c:557:1: warning: symbol 'pet_list' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/ptlrpc/import.c:200:9: warning: context imbalance in 'ptlrpc_deactivate_and_unlock_import' - unexpected unlock
+drivers/staging/lustre/lustre/ptlrpc/import.c:212:6: warning: context imbalance in 'ptlrpc_deactivate_import' - wrong count at exit
+
+drivers/staging/lustre/lustre/ptlrpc/ptlrpcd.c:87:14: warning: symbol 'ptlrpcd_mutex' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/ptlrpc/lproc_ptlrpc.c:51:3: warning: symbol 'll_rpc_opcode_table' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/lproc_ptlrpc.c:142:3: warning: symbol 'll_eopcode_table' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/lproc_ptlrpc.c:178:11: warning: symbol 'll_eopcode2str' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/lproc_ptlrpc.c:184:6: warning: symbol 'ptlrpc_lprocfs_register' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/lproc_ptlrpc.c:320:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/ptlrpc/lproc_ptlrpc.c:320:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/ptlrpc/lproc_ptlrpc.c:320:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/ptlrpc/lproc_ptlrpc.c:357:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/ptlrpc/lproc_ptlrpc.c:357:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/ptlrpc/lproc_ptlrpc.c:357:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/ptlrpc/lproc_ptlrpc.c:409:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/ptlrpc/lproc_ptlrpc.c:409:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/ptlrpc/lproc_ptlrpc.c:409:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/ptlrpc/lproc_ptlrpc.c:728:1: warning: symbol 'ptlrpc_lprocfs_svc_req_history_seek' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/lproc_ptlrpc.c:1051:1: warning: incorrect type in initializer (incompatible argument 2 (different address spaces))
+drivers/staging/lustre/lustre/ptlrpc/lproc_ptlrpc.c:1051:1:    expected long ( *write )( ... )
+drivers/staging/lustre/lustre/ptlrpc/lproc_ptlrpc.c:1051:1:    got long ( static [toplevel] *<noident> )( ... )
+drivers/staging/lustre/lustre/ptlrpc/lproc_ptlrpc.c:1196:34: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/ptlrpc/lproc_ptlrpc.c:1196:34:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/ptlrpc/lproc_ptlrpc.c:1196:34:    got char const *buffer
+drivers/staging/lustre/lustre/ptlrpc/lproc_ptlrpc.c:1275:34: warning: incorrect type in argument 2 (different address spaces)
+drivers/staging/lustre/lustre/ptlrpc/lproc_ptlrpc.c:1275:34:    expected void const [noderef] <asn:1>*from
+drivers/staging/lustre/lustre/ptlrpc/lproc_ptlrpc.c:1275:34:    got char const *buffer
+
+drivers/staging/lustre/lustre/ptlrpc/wiretest.c:46:6: warning: symbol 'lustre_assert_wire_constants' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/ptlrpc/layout.c:983:1: error: directive in argument list
+drivers/staging/lustre/lustre/ptlrpc/layout.c:985:1: error: directive in argument list
+drivers/staging/lustre/lustre/ptlrpc/layout.c:994:1: error: directive in argument list
+
+drivers/staging/lustre/lustre/ptlrpc/../include/linux/../lprocfs_status.h:536:29: warning: context imbalance in 'sptlrpc_req_ctx_switch' - different lock contexts for basic block
+drivers/staging/lustre/lustre/ptlrpc/../include/linux/../lprocfs_status.h:536:29: warning: context imbalance in 'sptlrpc_cli_unwrap_early_reply' - different lock contexts for basic block
+drivers/staging/lustre/lustre/ptlrpc/../include/linux/../lprocfs_status.h:536:29: warning: context imbalance in 'sptlrpc_enc_pool_init' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/ptlrpc/sec_gc.c:217:5: warning: symbol 'sptlrpc_gc_init' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/sec_gc.c:241:6: warning: symbol 'sptlrpc_gc_fini' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/ptlrpc/sec_null.c:455:5: warning: symbol 'sptlrpc_null_init' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/sec_null.c:468:6: warning: symbol 'sptlrpc_null_fini' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/ptlrpc/../include/lprocfs_status.h:536:29: warning: context imbalance in 'null_alloc_reqbuf' - different lock contexts for basic block
+drivers/staging/lustre/lustre/ptlrpc/../include/lprocfs_status.h:536:29: warning: context imbalance in 'null_alloc_repbuf' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/ptlrpc/sec_null.c:281:9: warning: context imbalance in 'null_enlarge_reqbuf' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/ptlrpc/../include/lprocfs_status.h:536:29: warning: context imbalance in 'null_alloc_rs' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/ptlrpc/sec_plain.c:991:5: warning: symbol 'sptlrpc_plain_init' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/sec_plain.c:1006:6: warning: symbol 'sptlrpc_plain_fini' was not declared. Should it be static?
+
+drivers/staging/lustre/lustre/ptlrpc/../include/lprocfs_status.h:536:29: warning: context imbalance in 'plain_alloc_reqbuf' - different lock contexts for basic block
+drivers/staging/lustre/lustre/ptlrpc/../include/lprocfs_status.h:536:29: warning: context imbalance in 'plain_alloc_repbuf' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/ptlrpc/sec_plain.c:693:9: warning: context imbalance in 'plain_enlarge_reqbuf' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/ptlrpc/../include/lprocfs_status.h:536:29: warning: context imbalance in 'plain_alloc_rs' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/ptlrpc/nrs.c:57:17: warning: symbol 'nrs_core' was not declared. Should it be static?
+drivers/staging/lustre/lustre/ptlrpc/nrs.c:501:39: warning: context imbalance in 'nrs_resource_put_safe' - different lock contexts for basic block
+
+drivers/staging/lustre/lustre/ptlrpc/nrs_fifo.c:260:28: warning: symbol 'nrs_conf_fifo' was not declared. Should it be static?
+
+drivers/staging/rtl8188eu/core/rtw_mlme.c:811:9: warning: context imbalance in 'rtw_free_assoc_resources' - different lock contexts for basic block
+
+drivers/staging/rtl8192u/r8192U_dm.c:1814:1: warning: symbol 'dm_change_rxpath_selection_setting' was not declared. Should it be static?
+
+drivers/staging/rtl8192u/ieee80211/ieee80211_softmac.c:414:6: warning: symbol 'ieee80211_send_probe_requests_rsl' was not declared. Should it be static?
+
+drivers/staging/rtl8723au/core/rtw_mlme.c:578:6: warning: symbol 'rtw_atimdone_event_callback23a' was not declared. Should it be static?
+drivers/staging/rtl8723au/core/rtw_mlme.c:2168:35: warning: incorrect type in assignment (different base types)
+drivers/staging/rtl8723au/core/rtw_mlme.c:2168:35:    expected restricted __le16 [addressable] [usertype] cap_info
+drivers/staging/rtl8723au/core/rtw_mlme.c:2168:35:    got int
+drivers/staging/rtl8723au/core/rtw_mlme.c:810:9: warning: context imbalance in 'rtw_free_assoc_resources23a' - different lock contexts for basic block
+
+drivers/staging/rtl8723au/core/rtw_mlme_ext.c:3812:16: warning: incorrect type in assignment (different base types)
+drivers/staging/rtl8723au/core/rtw_mlme_ext.c:3812:16:    expected unsigned short [unsigned] status
+drivers/staging/rtl8723au/core/rtw_mlme_ext.c:3812:16:    got restricted __le16 [usertype] <noident>
+drivers/staging/rtl8723au/core/rtw_mlme_ext.c:3851:34: warning: incorrect type in assignment (different base types)
+drivers/staging/rtl8723au/core/rtw_mlme_ext.c:3851:34:    expected unsigned short [unsigned] [assigned] [usertype] BA_timeout_value
+drivers/staging/rtl8723au/core/rtw_mlme_ext.c:3851:34:    got restricted __le16 [usertype] <noident>
+drivers/staging/rtl8723au/core/rtw_mlme_ext.c:3889:27: warning: cast to restricted __le16
+
+drivers/staging/rtl8723au/core/rtw_recv.c:1611:21: warning: incorrect type in assignment (different base types)
+drivers/staging/rtl8723au/core/rtw_recv.c:1611:21:    expected unsigned short [unsigned] [assigned] [usertype] len
+drivers/staging/rtl8723au/core/rtw_recv.c:1611:21:    got restricted __be16 [usertype] <noident>
+
+drivers/staging/rtl8723au/core/rtw_security.c:192:39: warning: incorrect type in assignment (different base types)
+drivers/staging/rtl8723au/core/rtw_security.c:192:39:    expected unsigned int [unsigned] [usertype] <noident>
+drivers/staging/rtl8723au/core/rtw_security.c:192:39:    got restricted __le32 [usertype] <noident>
+drivers/staging/rtl8723au/core/rtw_security.c:200:39: warning: incorrect type in assignment (different base types)
+drivers/staging/rtl8723au/core/rtw_security.c:200:39:    expected unsigned int [unsigned] [usertype] <noident>
+drivers/staging/rtl8723au/core/rtw_security.c:200:39:    got restricted __le32 [usertype] <noident>
+drivers/staging/rtl8723au/core/rtw_security.c:249:25: warning: cast to restricted __le32
+drivers/staging/rtl8723au/core/rtw_security.c:683:55: warning: incorrect type in assignment (different base types)
+drivers/staging/rtl8723au/core/rtw_security.c:683:55:    expected unsigned int [unsigned] [usertype] <noident>
+drivers/staging/rtl8723au/core/rtw_security.c:683:55:    got restricted __le32 [usertype] <noident>
+drivers/staging/rtl8723au/core/rtw_security.c:692:55: warning: incorrect type in assignment (different base types)
+drivers/staging/rtl8723au/core/rtw_security.c:692:55:    expected unsigned int [unsigned] [usertype] <noident>
+drivers/staging/rtl8723au/core/rtw_security.c:692:55:    got restricted __le32 [usertype] <noident>
+drivers/staging/rtl8723au/core/rtw_security.c:773:41: warning: cast to restricted __le32
+
+drivers/staging/rtl8723au/core/rtw_xmit.c:1285:36: warning: incorrect type in assignment (different base types)
+drivers/staging/rtl8723au/core/rtw_xmit.c:1285:36:    expected unsigned short [unsigned] [short] [usertype] <noident>
+drivers/staging/rtl8723au/core/rtw_xmit.c:1285:36:    got restricted __be16 [usertype] <noident>
+
+drivers/staging/rtl8723au/core/rtw_wlan_util.c:538:24: warning: cast to restricted __le16
+drivers/staging/rtl8723au/core/rtw_wlan_util.c:1547:29: warning: cast to restricted __le16
+drivers/staging/rtl8723au/core/rtw_wlan_util.c:1549:25: warning: cast to restricted __le16
+
+drivers/staging/rtl8723au/hal/rtl8723a_cmd.c:96:38: warning: cast to restricted __le16
+drivers/staging/rtl8723au/hal/rtl8723a_cmd.c:100:27: warning: cast to restricted __le32
+drivers/staging/rtl8723au/hal/rtl8723a_cmd.c:120:25: warning: incorrect type in assignment (different base types)
+drivers/staging/rtl8723au/hal/rtl8723a_cmd.c:120:25:    expected unsigned int [unsigned] [usertype] <noident>
+drivers/staging/rtl8723au/hal/rtl8723a_cmd.c:120:25:    got restricted __le32 [usertype] <noident>
+drivers/staging/rtl8723au/hal/rtl8723a_cmd.c:133:14: warning: incorrect type in assignment (different base types)
+drivers/staging/rtl8723au/hal/rtl8723a_cmd.c:133:14:    expected unsigned int [unsigned] [usertype] mask
+drivers/staging/rtl8723au/hal/rtl8723a_cmd.c:133:14:    got restricted __le32 [usertype] <noident>
+
+drivers/staging/rtl8723au/hal/rtl8723a_hal_init.c:275:37: warning: cast to restricted __le16
+drivers/staging/rtl8723au/hal/rtl8723a_hal_init.c:277:39: warning: cast to restricted __le16
+drivers/staging/rtl8723au/hal/rtl8723a_hal_init.c:289:13: warning: cast to restricted __le16
+drivers/staging/rtl8723au/hal/rtl8723a_hal_init.c:289:13: warning: cast to restricted __le16
+drivers/staging/rtl8723au/hal/rtl8723a_hal_init.c:289:13: warning: cast to restricted __le16
+drivers/staging/rtl8723au/hal/rtl8723a_hal_init.c:747:1: warning: symbol 'rtl8723a_EfusePgPacketRead' was not declared. Should it be static?
+drivers/staging/rtl8723au/hal/rtl8723a_hal_init.c:1610:20: warning: cast to restricted __le16
+drivers/staging/rtl8723au/hal/rtl8723a_hal_init.c:1978:29: warning: cast to restricted __le16
+drivers/staging/rtl8723au/hal/rtl8723a_hal_init.c:2221:24: warning: cast from restricted __le32
+drivers/staging/rtl8723au/hal/rtl8723a_hal_init.c:2222:24: warning: cast from restricted __le32
+drivers/staging/rtl8723au/hal/rtl8723a_hal_init.c:2223:24: warning: cast from restricted __le32
+drivers/staging/rtl8723au/hal/rtl8723a_hal_init.c:2224:24: warning: cast from restricted __le32
+drivers/staging/rtl8723au/hal/rtl8723a_hal_init.c:2225:24: warning: cast from restricted __le32
+drivers/staging/rtl8723au/hal/rtl8723a_hal_init.c:2226:24: warning: cast from restricted __le32
+drivers/staging/rtl8723au/hal/rtl8723a_hal_init.c:2227:24: warning: cast from restricted __le32
+drivers/staging/rtl8723au/hal/rtl8723a_hal_init.c:2228:24: warning: cast from restricted __le32
+
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:66:47: warning: cast to restricted __le16
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:100:22: warning: invalid assignment: |=
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:100:22:    left side has type unsigned int
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:100:22:    right side has type restricted __le32
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:103:22: warning: invalid assignment: |=
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:103:22:    left side has type unsigned int
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:103:22:    right side has type restricted __le32
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:111:22: warning: invalid assignment: |=
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:111:22:    left side has type unsigned int
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:111:22:    right side has type restricted __le32
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:115:30: warning: invalid assignment: |=
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:115:30:    left side has type unsigned int
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:115:30:    right side has type restricted __le32
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:118:38: warning: invalid assignment: |=
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:118:38:    left side has type unsigned int
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:118:38:    right side has type restricted __le32
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:120:38: warning: invalid assignment: |=
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:120:38:    left side has type unsigned int
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:120:38:    right side has type restricted __le32
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:124:38: warning: invalid assignment: |=
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:124:38:    left side has type unsigned int
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:124:38:    right side has type restricted __le32
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:132:22: warning: invalid assignment: |=
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:132:22:    left side has type unsigned int
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:132:22:    right side has type restricted __le32
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:135:30: warning: invalid assignment: |=
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:135:30:    left side has type unsigned int
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:135:30:    right side has type restricted __le32
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:137:30: warning: invalid assignment: |=
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:137:30:    left side has type unsigned int
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:137:30:    right side has type restricted __le32
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:141:30: warning: invalid assignment: |=
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:141:30:    left side has type unsigned int
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:141:30:    right side has type restricted __le32
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:196:51: warning: incorrect type in argument 2 (different base types)
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:196:51:    expected unsigned int [usertype] *pdw
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:196:51:    got restricted __le32 *<noident>
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:197:51: warning: incorrect type in argument 2 (different base types)
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:197:51:    expected unsigned int [usertype] *pdw
+drivers/staging/rtl8723au/hal/rtl8723au_xmit.c:197:51:    got restricted __le32 *<noident>
+
+drivers/staging/rtl8723au/hal/rtl8723a_bt-coexist.c:343:36: warning: cast to restricted __le16
+
+drivers/staging/unisys/visorchannel/visorchannel_funcs.c:443:9: warning: context imbalance in 'visorchannel_signalremove' - different lock contexts for basic block
+drivers/staging/unisys/visorchannel/visorchannel_funcs.c:496:9: warning: context imbalance in 'visorchannel_signalinsert' - different lock contexts for basic block
+
+drivers/staging/unisys/visorutil/visorkmodutils.c:44:6: warning: symbol 'kmalloc_kernel' was not declared. Should it be static?
+
+drivers/staging/vt6655/device_main.c:966:15: warning: memset with byte count of 120752
+
+drivers/staging/vt6655/ioctl.c:42:12: warning: symbol 'wpa_Result' was not declared. Should it be static?
+
+drivers/staging/wlan-ng/prism2fw.c:250:15: warning: memset with byte count of 120000
+drivers/staging/wlan-ng/prism2fw.c:469:15: warning: memset with byte count of 120000
