@@ -1,0 +1,26 @@
+[~/cloud/code/eudyptula/17]$ make
+make -C /lib/modules/3.19.2-1-ARCH/build M=/home/lorenzo/cloud/code/eudyptula/17 modules
+make[1]: Entering directory '/usr/lib/modules/3.19.2-1-ARCH/build'
+  CC [M]  /home/lorenzo/cloud/code/eudyptula/17/hello.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/lorenzo/cloud/code/eudyptula/17/hello.mod.o
+  LD [M]  /home/lorenzo/cloud/code/eudyptula/17/hello.ko
+make[1]: Leaving directory '/usr/lib/modules/3.19.2-1-ARCH/build'
+[~/cloud/code/eudyptula/17]$ ls /dev/eudyptula
+ls: cannot access /dev/eudyptula: No such file or directory
+[~/cloud/code/eudyptula/17]$ sudo insmod hello.ko
+[~/cloud/code/eudyptula/17]$ ls -l /dev/eudyptula
+c-w--w--w- 1 root root 10, 54 Mar 28 00:36 /dev/eudyptula
+[~/cloud/code/eudyptula/17]$ echo foo > /dev/eudyptula
+echo: write error: invalid argument
+[~/cloud/code/eudyptula/17]$ echo f8cdc7cef553 > /dev/eudyptula
+[~/cloud/code/eudyptula/17]$ pgrep eudyptula
+21654
+[~/cloud/code/eudyptula/17]$ ps u 21654
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root     21654  0.0  0.0      0     0 ?        S    00:36   0:00 [eudyptula]
+[~/cloud/code/eudyptula/17]$ sudo rmmod hello
+[~/cloud/code/eudyptula/17]$ pgrep eudyptula
+[~/cloud/code/eudyptula/17]$ ls /dev/eudyptula
+ls: cannot access /dev/eudyptula: No such file or directory
