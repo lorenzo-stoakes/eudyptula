@@ -1,0 +1,46 @@
+Apologies for remailing _again_, however I found a serious issue which I must have neglected first time round, whereby kfree'd elements were left in the list leading to potential accesses after free. The attached version fixes this.
+
+Again I reran my testing:-
+
+[~/cloud/code/eudyptula/18]$ cat ./test.sh
+#!/bin/bash
+
+insmod hello.ko
+echo "AliceAliceAliceAliceAlice" > /dev/eudyptula
+echo "Bob" > /dev/eudyptula
+sleep 15
+echo "Dave" > /dev/eudyptula
+echo "Gena" > /dev/eudyptula
+rmmod hello
+dmesg -T | tail -4
+echo ---
+sleep 15
+dmesg -T | tail -4
+[~/cloud/code/eudyptula/18]$ sudo ./test.sh
+[Fri Apr 24 17:49:26 2015] AliceAliceAliceAlic: 1
+[Fri Apr 24 17:49:31 2015] Bob: 2
+[Fri Apr 24 18:33:07 2015] AliceAliceAliceAlic: 1
+[Fri Apr 24 18:33:12 2015] Bob: 2
+---
+[Fri Apr 24 17:49:26 2015] AliceAliceAliceAlic: 1
+[Fri Apr 24 17:49:31 2015] Bob: 2
+[Fri Apr 24 18:33:07 2015] AliceAliceAliceAlic: 1
+[Fri Apr 24 18:33:12 2015] Bob: 2
+[~/cloud/code/eudyptula/18]$ ls -l /dev/eudyptula
+ls: cannot access /dev/eudyptula: No such file or directory
+[~/cloud/code/eudyptula/18]$ sudo insmod hello.ko
+[~/cloud/code/eudyptula/18]$ ls -l /dev/eudyptula
+c-w--w--w- 1 root root 10, 54 Apr 24 18:33 /dev/eudyptula
+[~/cloud/code/eudyptula/18]$ ps u $(pgrep eudyptula)
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root      8290  0.0  0.0      0     0 ?        S    18:33   0:00 [eudyptula]
+[~/cloud/code/eudyptula/18]$ echo foo > /dev/eudyptula
+[~/cloud/code/eudyptula/18]$ sleep 15
+[~/cloud/code/eudyptula/18]$ dmesg -T | tail -2
+[Fri Apr 24 18:33:12 2015] Bob: 2
+[Fri Apr 24 18:35:21 2015] foo: 1
+[~/cloud/code/eudyptula/18]$ sudo rmmod hello
+[~/cloud/code/eudyptula/18]$ ls -l /dev/eudyptula
+ls: cannot access /dev/eudyptula: No such file or directory
+[~/cloud/code/eudyptula/18]$ pgrep eudyptula
+[~/cloud/code/eudyptula/18]$

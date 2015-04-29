@@ -1,0 +1,50 @@
+Apologies for resending twice, I realised I made a mistake in my last submission
+- there seems to be the unlikely possibility of a race between the atomic_inc and
+atomic_read and I wasn't aware of the atomic_inc_return function. I have
+updated to use this function which eliminates this possibility.
+
+I enclose updated output below for completeness:-
+
+[~/cloud/code/eudyptula/18]$ cat test.sh
+#!/bin/bash
+
+insmod hello.ko
+echo "AliceAliceAliceAliceAlice" > /dev/eudyptula
+echo "Bob" > /dev/eudyptula
+sleep 15
+echo "Dave" > /dev/eudyptula
+echo "Gena" > /dev/eudyptula
+rmmod hello
+dmesg -T | tail -4
+sleep 15
+dmesg -T | tail -4
+[~/cloud/code/eudyptula/18]$ sudo ./test.sh
+[Thu Apr 23 23:05:53 2015] Bob: 2
+[Fri Apr 24 10:39:36 2015] snd_hda_intel 0000:00:1b.0: IRQ timing workaround is activated for card #0. Suggest a bigger bdl_pos_adj.
+[Fri Apr 24 15:44:16 2015] AliceAliceAliceAlic: 1
+[Fri Apr 24 15:44:21 2015] Bob: 2
+[Thu Apr 23 23:05:53 2015] Bob: 2
+[Fri Apr 24 10:39:36 2015] snd_hda_intel 0000:00:1b.0: IRQ timing workaround is activated for card #0. Suggest a bigger bdl_pos_adj.
+[Fri Apr 24 15:44:16 2015] AliceAliceAliceAlic: 1
+[Fri Apr 24 15:44:21 2015] Bob: 2
+[~/cloud/code/eudyptula/18]$ sudo insmod hello.ko
+[~/cloud/code/eudyptula/18]$ ls -l /dev/eudyptula
+c-w--w--w- 1 root root 10, 54 Apr 24 15:47 /dev/eudyptula
+[~/cloud/code/eudyptula/18]$ pgrep eudyptula
+12802
+[~/cloud/code/eudyptula/18]$ ps u 12802
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root     12802  0.0  0.0      0     0 ?        S    15:47   0:00 [eudyptula]
+[~/cloud/code/eudyptula/18]$ echo ohai > /dev/eudyptula
+[~/cloud/code/eudyptula/18]$ echo ohai > /dev/eudyptula
+[~/cloud/code/eudyptula/18]$ echo ohai > /dev/eudyptula
+[~/cloud/code/eudyptula/18]$ sudo rmmod hello
+[~/cloud/code/eudyptula/18]$ sleep 15
+[~/cloud/code/eudyptula/18]$ dmesg -T | tail -4
+[Thu Apr 23 23:05:53 2015] Bob: 2
+[Fri Apr 24 10:39:36 2015] snd_hda_intel 0000:00:1b.0: IRQ timing workaround is activated for card #0. Suggest a bigger bdl_pos_adj.
+[Fri Apr 24 15:44:16 2015] AliceAliceAliceAlic: 1
+[Fri Apr 24 15:44:21 2015] Bob: 2
+[~/cloud/code/eudyptula/18]$ pgrep eudyptula
+[~/cloud/code/eudyptula/18]$ ls /dev/eudyptula
+ls: cannot access /dev/eudyptula: No such file or directory

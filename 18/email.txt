@@ -1,0 +1,45 @@
+[~/cloud/code/eudyptula/18]$ cat test.sh
+#!/bin/bash
+
+insmod hello.ko
+echo "AliceAliceAliceAliceAlice" > /dev/eudyptula
+echo "Bob" > /dev/eudyptula
+sleep 15
+echo "Dave" > /dev/eudyptula
+echo "Gena" > /dev/eudyptula
+rmmod hello
+dmesg -T | tail -4
+sleep 15
+dmesg -T | tail -4
+[~/cloud/code/eudyptula/18]$ sudo ./test.sh
+[sudo] password for lorenzo:
+[Wed Apr  1 00:37:18 2015] cheesy: 1
+[Wed Apr  1 00:37:23 2015] cheesy: 2
+[Wed Apr  1 00:48:34 2015] AliceAliceAliceAlic: 1
+[Wed Apr  1 00:48:39 2015] Bob: 2
+[Wed Apr  1 00:37:18 2015] cheesy: 1
+[Wed Apr  1 00:37:23 2015] cheesy: 2
+[Wed Apr  1 00:48:34 2015] AliceAliceAliceAlic: 1
+[Wed Apr  1 00:48:39 2015] Bob: 2
+[~/cloud/code/eudyptula/18]$ sudo insmod hello.ko
+[~/cloud/code/eudyptula/18]$ ls -l /dev/eudyptula
+c-w--w--w- 1 root root 10, 54 Apr  1 00:50 /dev/eudyptula
+[~/cloud/code/eudyptula/18]$ pgrep eudyptula
+10425
+[~/cloud/code/eudyptula/18]$ ps u 10425
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root     10425  0.0  0.0      0     0 ?        S    00:50   0:00 [eudyptula]
+[~/cloud/code/eudyptula/18]$ sudo rmmod hello
+[~/cloud/code/eudyptula/18]$ echo ohai > /dev/eudyptula
+[~/cloud/code/eudyptula/18]$ echo ohai > /dev/eudyptula
+[~/cloud/code/eudyptula/18]$ echo ohai > /dev/eudyptula
+[~/cloud/code/eudyptula/18]$ sudo rmmod hello
+[~/cloud/code/eudyptula/18]$ sleep 15
+[~/cloud/code/eudyptula/18]$ dmesg -T | tail -4
+[Wed Apr  1 00:37:18 2015] cheesy: 1
+[Wed Apr  1 00:37:23 2015] cheesy: 2
+[Wed Apr  1 00:48:34 2015] AliceAliceAliceAlic: 1
+[Wed Apr  1 00:48:39 2015] Bob: 2
+[~/cloud/code/eudyptula/18]$ pgrep eudyptula
+[~/cloud/code/eudyptula/18]$ ls /dev/eudyptula
+ls: cannot access /dev/eudyptula: No such file or directory

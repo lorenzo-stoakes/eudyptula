@@ -1,0 +1,43 @@
+[~/cloud/code/eudyptula/18]$ cat test.sh
+#!/bin/bash
+
+insmod hello.ko
+echo "AliceAliceAliceAliceAlice" > /dev/eudyptula
+echo "Bob" > /dev/eudyptula
+sleep 15
+echo "Dave" > /dev/eudyptula
+echo "Gena" > /dev/eudyptula
+rmmod hello
+dmesg -T | tail -4
+sleep 15
+dmesg -T | tail -4
+[~/cloud/code/eudyptula/18]$ sudo ./test.sh
+[Thu Apr 23 20:16:26 2015] ip_tables: (C) 2000-2006 Netfilter Core Team
+[Thu Apr 23 20:16:26 2015] nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+[Thu Apr 23 23:05:48 2015] AliceAliceAliceAlic: 1
+[Thu Apr 23 23:05:53 2015] Bob: 2
+[Thu Apr 23 20:16:26 2015] ip_tables: (C) 2000-2006 Netfilter Core Team
+[Thu Apr 23 20:16:26 2015] nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+[Thu Apr 23 23:05:48 2015] AliceAliceAliceAlic: 1
+[Thu Apr 23 23:05:53 2015] Bob: 2
+[~/cloud/code/eudyptula/18]$ sudo insmod hello.ko
+[~/cloud/code/eudyptula/18]$ ls -l /dev/eudyptula
+c-w--w--w- 1 root root 10, 54 Apr 23 23:06 /dev/eudyptula
+[~/cloud/code/eudyptula/18]$ pgrep eudyptula
+21859
+[~/cloud/code/eudyptula/18]$ ps u 21859
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root     21859  0.0  0.0      0     0 ?        S    23:06   0:00 [eudyptula]
+[~/cloud/code/eudyptula/18]$ echo ohai > /dev/eudyptula
+[~/cloud/code/eudyptula/18]$ echo ohai > /dev/eudyptula
+[~/cloud/code/eudyptula/18]$ echo ohai > /dev/eudyptula
+[~/cloud/code/eudyptula/18]$ sudo rmmod hello
+[~/cloud/code/eudyptula/18]$ sleep 15
+[~/cloud/code/eudyptula/18]$ dmesg -T | tail -4
+[Thu Apr 23 20:16:26 2015] ip_tables: (C) 2000-2006 Netfilter Core Team
+[Thu Apr 23 20:16:26 2015] nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+[Thu Apr 23 23:05:48 2015] AliceAliceAliceAlic: 1
+[Thu Apr 23 23:05:53 2015] Bob: 2
+[~/cloud/code/eudyptula/18]$ pgrep eudyptula
+[~/cloud/code/eudyptula/18]$ ls /dev/eudyptula
+ls: cannot access /dev/eudyptula: No such file or directory
