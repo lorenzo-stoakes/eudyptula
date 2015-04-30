@@ -1,0 +1,67 @@
+[~/cloud/code/eudyptula/19]$ make
+make -C /lib/modules/4.0.1-1-ARCH/build M=/home/lorenzo/cloud/code/eudyptula/19 modules
+make[1]: Entering directory '/usr/lib/modules/4.0.1-1-ARCH/build'
+  CC [M]  /home/lorenzo/cloud/code/eudyptula/19/filter.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  LD [M]  /home/lorenzo/cloud/code/eudyptula/19/filter.ko
+make[1]: Leaving directory '/usr/lib/modules/4.0.1-1-ARCH/build'
+[~/cloud/code/eudyptula/19]$ sudo insmod filter.ko
+[sudo] password for lorenzo:
+[~/cloud/code/eudyptula/19]$ dmesg -T | tail -5
+[Thu Apr 30 00:33:48 2015] device-mapper: ioctl: 4.30.0-ioctl (2014-12-22) initialised: dm-devel@redhat.com
+[Thu Apr 30 00:33:48 2015] loop: module loaded
+[Thu Apr 30 00:33:48 2015] bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load br_netfilter if you need this.
+[Thu Apr 30 00:33:48 2015] nf_conntrack version 0.5.0 (65536 buckets, 262144 max)
+[Thu Apr 30 00:33:48 2015] ip_tables: (C) 2000-2006 Netfilter Core Team
+~]$ telnet localhost 25
+Trying ::1...
+Connection failed: Connection refused
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+220 lucifer.localdomain ESMTP Postfix
+mail
+501 5.5.4 Syntax: MAIL FROM:<address>
+mail from: lorenzo@lucifer.localdomain
+250 2.1.0 Ok
+rcpt to: lorenzo@lucifer
+250 2.1.5 Ok
+data
+354 End data with <CR><LF>.<CR><LF>
+subject: [f8cdc7cef553] Proof Email
+Proof :)
+.
+250 2.0.0 Ok: queued as C2262440C63
+quit
+221 2.0.0 Bye
+Connection closed by foreign host.
+[~/cloud/code/eudyptula/19]$ dmesg -T | tail -5
+[Thu Apr 30 00:33:48 2015] bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load br_netfilter if you need this.
+[Thu Apr 30 00:33:48 2015] nf_conntrack version 0.5.0 (65536 buckets, 262144 max)
+[Thu Apr 30 00:33:48 2015] ip_tables: (C) 2000-2006 Netfilter Core Team
+[Thu Apr 30 01:14:53 2015] f8cdc7cef553
+[Thu Apr 30 01:18:02 2015] f8cdc7cef553
+[~/cloud/code/eudyptula/19]$ nc -l -p 1337 &
+[2] 3509
+[~/cloud/code/eudyptula/19]$ echo f8cdc7cef553 | nc localhost 1337
+f8cdc7cef553
+[2]  + 3509 suspended (tty input)  nc -l -p 1337
+^C%
+[~/cloud/code/eudyptula/19]$ dmesg -T | tail -3
+[Thu Apr 30 01:14:53 2015] f8cdc7cef553
+[Thu Apr 30 01:18:02 2015] f8cdc7cef553
+[Thu Apr 30 01:29:53 2015] f8cdc7cef553
+[~/cloud/code/eudyptula/19]$ sudo rmmod filter
+[sudo] password for lorenzo:
+[~/cloud/code/eudyptula/19]$ nc -l -p 1337 &
+[3] 3586
+[~/cloud/code/eudyptula/19]$ echo f8cdc7cef553 | nc localhost 1337
+f8cdc7cef553
+[3]  + 3586 suspended (tty input)  nc -l -p 1337
+^C%
+[~/cloud/code/eudyptula/19]$ dmesg -T | tail -3
+[Thu Apr 30 01:14:53 2015] f8cdc7cef553
+[Thu Apr 30 01:18:02 2015] f8cdc7cef553
+[Thu Apr 30 01:29:53 2015] f8cdc7cef553
+[~/cloud/code/eudyptula/19]$
