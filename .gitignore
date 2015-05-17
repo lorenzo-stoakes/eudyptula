@@ -5,3 +5,6 @@
 .*
 *.mod.c
 *.img
+
+# Binary from task 20.
+20/fatnametest
