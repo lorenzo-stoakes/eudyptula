@@ -1,0 +1,434 @@
+From: Lorenzo Stoakes <lstoakes@gmail.com>
+Date: Tue, 5 May 2015 17:38:44 +0100
+Subject: [f8cdc7cef553] [PATCH] Task 20: fs: fat: Add set_volume_label ioctl
+
+This patch is based on mainline Linux v4.0:-
+
+[~/linux/fs/fat]$ git describe --debug
+searching to describe HEAD
+finished search at 39a8804455fb23f09157341d3ba7db6d7ae6ee76
+ annotated          1 v4.0
+traversed 2 commits
+v4.0-1-g13eabcb
+
+I also enclose the testing code, fatnametest.c, and 3 scripts I use to perform
+the testing - prepare.sh which copies the test code and the test scripts into
+the root image, and test_sh and do_test_sh which get renamed to test.sh and
+do_test.sh in the image.
+
+test.sh is simply a wrapper around do_test.sh which runs the tests for FAT16
+and FAT32.
+
+do_test.sh does the actual testing work - changing the label twice, one run with
+no initial volume label defined and a second run with one defined.
+
+In addition do_test.sh creates a large random data file to compare before and
+after label change in case of corruption, and it also runs a background job
+which creates a large number of subdirectories in the root directory
+simultaneously with the label change to see whether this brings out any race
+conditions.
+
+I enclose 'proof' below - note that the development kernel has debug
+configuration options set so these messages appear from time to time in the
+output (here I use my personal scripts buildLinux and runLinux to build and run
+a linux dev env in qemu):-
+
+[~/cloud/code/eudyptula/20]$ buildLinux && ./prepare.sh && ./runLinux
+Configuring kernel...
+Compiling kernel...
+Installing kernel...
+Mounting rootfs image...
+Installing headers and modules...
+Installing initrd image...
+Done!
+prepare.sh: rootfs prepared: test script is /home/lorenzo/test.sh
+Creating bridge interface 'qemu-br0'
+Starting NAT
+Creating TAP interface 'tap0'
+Adding interface 'tap0' to bridge 'qemu-br0'
+[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 4.0.0+ (lorenzo@lucifer) (gcc version 4.9.2 20150304 (prerelease) (GCC) ) #4 SMP Tue May 5 16:08:21 BST 2015
+[    0.000000] Command line: root=/dev/vda rw console=ttyS0
+[    0.000000] e820: BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x00000000bffdefff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000bffdf000-0x00000000bfffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000feffc000-0x00000000feffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000100000000-0x000000013fffffff] usable
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] SMBIOS 2.8 present.
+
+<snip>
+
+[  OK  ] Found device /dev/ttyS0.
+[    0.922819] systemd[1]: Found device /dev/ttyS0.
+[  OK  ] Started Journal Service.
+[    1.014924] systemd[1]: Started Journal Service.
+         Starting Flush Journal to Persistent Storage...
+[    1.028650] systemd-journald[1456]: Received request to flush runtime journal from PID 1
+[    1.056543] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input3
+[  OK  ] Started Flush Journal to Persistent Storage.
+         Starting Create Volatile Files and Directories...
+[  OK  ] Started Create Volatile Files and Directories.
+         Starting Update UTMP about System Boot/Shutdown...
+[  OK  ] Started Update UTMP about System Boot/Shutdown.
+[  OK  ] Reached target System Initialization.
+[  OK  ] Listening on D-Bus System Message Bus Socket.
+[  OK  ] Reached target Sockets.
+[  OK  ] Reached target Basic System.
+[  OK  ] Started D-Bus System Message Bus.
+         Starting D-Bus System Message Bus...
+         Starting Login Service...
+         Starting dhcpcd on all interfaces...
+         Starting Permit User Sessions...
+[  OK  ] Reached target Timers.
+[  OK  ] Started Permit User Sessions.
+[  OK  ] Started Getty on tty1.
+         Starting Getty on tty1...
+[  OK  ] Started Serial Getty on ttyS0.
+         Starting Serial Getty on ttyS0...
+[  OK  ] Reached target Login Prompts.
+[  OK  ] Started dhcpcd on all interfaces.
+[  OK  ] Started Login Service.
+[  OK  ] Reached target Network.
+[  OK  ] Reached target Multi-User System.
+[  OK  ] Reached target Graphical Interface.
+
+Arch Linux 4.0.0+ (ttyS0)
+
+tux login: lorenzo (automatic login)
+
+[    1.145297] audit: type=1006 audit(1430842939.145:2): pid=1991 uid=0 subj=kernel old-auid=4294967295 auid=1000 old-ses=4294967295 ses=1 res=1
+[    1.154300] audit: type=1006 audit(1430842939.154:3): pid=2010 uid=0 subj=kernel old-auid=4294967295 auid=1000 old-ses=4294967295 ses=2 res=1
+Last login: Tue May  5 16:21:28 on ttyS0
+
+[~]$ ./test.sh[    2.372192] Switched to clocksource tsc
+
+Testing FAT16...
+FAT16:    before: NO NAME
+FAT16:   new/1st: BETA
+FAT16: new/final: OMEGA
+Now with ALPHA set beforehand...
+FAT16:    before: ALPHA
+FAT16:   new/1st: BETA
+FAT16: new/final: OMEGA
+
+Testing FAT32...
+FAT32:    before: NO NAME
+FAT32:   new/1st: BETA
+FAT32: new/final: OMEGA
+Now with ALPHA set beforehand...
+FAT32:    before: ALPHA
+[   16.633161] cp (6159) used greatest stack depth: 12472 bytes left
+FAT32:   new/1st: BETA
+FAT32: new/final: OMEGA
+Done!
+[~]$ uname -a
+Linux tux 4.0.0+ #4 SMP Tue May 5 16:08:21 BST 2015 x86_64 GNU/Linux
+[~]$
+
+Signed-off-by: Lorenzo Stoakes <lstoakes@gmail.com>
+---
+ fs/fat/dir.c                  |  30 +++++++
+ fs/fat/fat.h                  |   3 +
+ fs/fat/file.c                 | 205 ++++++++++++++++++++++++++++++++++++++++++
+ include/uapi/linux/msdos_fs.h |   1 +
+ 4 files changed, 239 insertions(+)
+
+diff --git a/fs/fat/dir.c b/fs/fat/dir.c
+index c5d6bb9..b66acc5 100644
+--- a/fs/fat/dir.c
++++ b/fs/fat/dir.c
+@@ -879,6 +879,36 @@ static int fat_get_short_entry(struct inode *dir, loff_t *pos,
+ 	return -ENOENT;
+ }
+
++int fat_get_volume_label_entry(struct inode *dir, loff_t *pos,
++			struct buffer_head **bh, struct msdos_dir_entry **de)
++{
++	__u8 attr;
++	struct msdos_dir_entry *entry;
++
++	/* fat_get_entry correctly handles FAT16 directory entries. */
++	while (fat_get_entry(dir, pos, bh, de) >= 0) {
++		entry = *de;
++		attr = entry->attr;
++
++		/*
++		 * Obviously if this entry isn't marked with the volume
++		 * attribute it's not what we're looking for, but we also have
++		 * to consider other cases:-
++		 *
++		 * + Freed entries - these are sometimes assigned ATTR_VOLUME.
++		 * + ATTR_UNUSED/ATTR_EXT - these include the ATTR_VOLUME bit
++		 *   but mean something else.
++		 */
++		if (!(attr & ATTR_VOLUME) || IS_FREE(entry->name) ||
++			attr == ATTR_UNUSED || attr == ATTR_EXT)
++			continue;
++
++		return 0;
++	}
++
++	return -ENOENT;
++}
++
+ /*
+  * The ".." entry can not provide the "struct fat_slot_info" information
+  * for inode, nor a usable i_pos. So, this function provides some information
+diff --git a/fs/fat/fat.h b/fs/fat/fat.h
+index 64e295e..6003b1c 100644
+--- a/fs/fat/fat.h
++++ b/fs/fat/fat.h
+@@ -301,6 +301,9 @@ extern int fat_scan(struct inode *dir, const unsigned char *name,
+ 		    struct fat_slot_info *sinfo);
+ extern int fat_scan_logstart(struct inode *dir, int i_logstart,
+ 			     struct fat_slot_info *sinfo);
++extern int fat_get_volume_label_entry(struct inode *dir, loff_t *pos,
++				struct buffer_head **bh,
++				struct msdos_dir_entry **de);
+ extern int fat_get_dotdot_entry(struct inode *dir, struct buffer_head **bh,
+ 				struct msdos_dir_entry **de);
+ extern int fat_alloc_new_dir(struct inode *dir, struct timespec *ts);
+diff --git a/fs/fat/file.c b/fs/fat/file.c
+index 8429c68..c3d3155 100644
+--- a/fs/fat/file.c
++++ b/fs/fat/file.c
+@@ -120,6 +120,209 @@ static int fat_ioctl_get_volume_id(struct inode *inode, u32 __user *user_attr)
+ 	return put_user(sbi->vol_id, user_attr);
+ }
+
++static int set_volume_label(struct super_block *sb, char *label)
++{
++	int err = 0;
++	loff_t label_pos = 0;
++	struct dentry *root_dentry = sb->s_root;
++	struct inode *root_inode = root_dentry->d_inode;
++	struct inode *label_inode = NULL;
++	struct buffer_head *label_bh = NULL;
++	struct msdos_dir_entry *label_dir_entry = NULL;
++
++	mutex_lock(&root_inode->i_mutex);
++
++	/* Works correctly for both FAT16 and FAT32. */
++	err = fat_get_volume_label_entry(root_inode, &label_pos, &label_bh,
++					&label_dir_entry);
++	if (err)
++		goto out_unlock;
++
++	/*
++	 * Check whether the volume label directory entry actually has an inode
++	 * allocated to it. I don't _think_ it is ever allocated one, but if so
++	 * we ought to lock that inode too + mark it dirty below.
++	 */
++	label_inode = fat_iget(sb, label_pos);
++	if (label_inode) {
++		fat_msg(sb, KERN_NOTICE, "Volume label has inode");
++		mutex_lock(&label_inode->i_mutex);
++	}
++
++	memcpy(label_dir_entry->name, label, MSDOS_NAME);
++
++	mark_buffer_dirty(label_bh);
++	sync_dirty_buffer(label_bh);
++	brelse(label_bh);
++
++	if (label_inode)
++		err = fat_sync_inode(label_inode);
++
++out_unlock:
++	mutex_unlock(&root_inode->i_mutex);
++	if (label_inode)
++		mutex_unlock(&label_inode->i_mutex);
++
++	return err;
++}
++
++static int create_volume_label(struct super_block *sb, char *label)
++{
++	int err = 0;
++	struct dentry *root_dentry = sb->s_root;
++	struct inode *root_inode = root_dentry->d_inode;
++	struct fat_slot_info dummy;
++	struct msdos_dir_entry de = { { 0 } }; /* Default empty. */
++
++	de.attr = ATTR_VOLUME;
++	memcpy(de.name, label, MSDOS_NAME);
++
++	mutex_lock(&root_inode->i_mutex);
++
++	/*
++	 * fat_add_entries handles both FAT16 and FAT32 correctly, adding a
++	 * directory entry to either the root directory entries section of the
++	 * file system (FAT16) or a new entry in the data portion of the file
++	 * system, appending a cluster as necessary (FAT32.)
++	 */
++	err = fat_add_entries(root_inode, &de, 1, &dummy);
++	if (!err)
++		mark_inode_dirty(root_inode);
++
++	mutex_unlock(&root_inode->i_mutex);
++
++	return err;
++}
++
++static void set_boot_label_sector(struct super_block *sb, char *label,
++				__le16 sector)
++{
++	char *boot_label;
++	__le16 backup_sector;
++	struct buffer_head *bh;
++	struct msdos_sb_info *sbi = MSDOS_SB(sb);
++	struct fat_boot_sector *b;
++	int is_backup = sector > 0;
++
++	mutex_lock(&sbi->s_lock);
++
++	/*
++	 * Block size of the super is set to match logical sector size in
++	 * fat_fill_super().
++	 */
++	bh = sb_bread(sb, sector);
++
++	if (bh == NULL) {
++		/* This is non-critical, so just report it. */
++		fat_msg(sb, KERN_WARNING,
++			"Can't write volume label to %sboot sector",
++			is_backup ? "backup " : "");
++
++		brelse(bh);
++		mutex_unlock(&sbi->s_lock);
++
++		return;
++	}
++
++	b = (struct fat_boot_sector *) bh->b_data;
++	if (sbi->fat_bits == 16)
++		boot_label = b->fat16.vol_label;
++	else /* fat32 */
++		boot_label = b->fat32.vol_label;
++	memcpy(boot_label, label, MSDOS_NAME);
++
++	mark_buffer_dirty(bh);
++	sync_dirty_buffer(bh);
++	brelse(bh);
++
++	mutex_unlock(&sbi->s_lock);
++
++	/* On FAT32 there is a backup boot sector - update that too. */
++	if (!is_backup && sbi->fat_bits == 32) {
++		backup_sector = b->fat32.backup_boot;
++
++		/* 0 or 0xffff indicate no backup. */
++		if (backup_sector != 0 && backup_sector != 0xffff)
++			set_boot_label_sector(sb, label, backup_sector);
++	}
++}
++
++static void set_boot_label(struct super_block *sb, char *label)
++{
++	set_boot_label_sector(sb, label, 0);
++}
++
++static int volume_label_invalid(struct super_block *sb, char *label)
++{
++	char chr;
++	int i;
++
++	for (i = 0; i < MSDOS_NAME; i++) {
++		chr = label[i];
++
++		if (!(chr == ' ' || ('A' <= chr && chr <= 'Z'))) {
++			fat_msg(sb, KERN_ERR, "Invalid volume label '%s'",
++				label);
++
++			return 1;
++		}
++	}
++
++	return 0;
++}
++
++static int fat_ioctl_set_volume_label(struct inode *inode,
++				char __user *user_label)
++{
++	int err, length;
++	char label[MSDOS_NAME + 1];
++	struct super_block *sb = inode->i_sb;
++	struct msdos_sb_info *sbi = MSDOS_SB(sb);
++
++	if (sb->s_flags & MS_RDONLY)
++		return -EROFS;
++
++	err = strncpy_from_user(label, user_label, MSDOS_NAME + 1);
++	if (IS_ERR_VALUE(err))
++		return err;
++	length = err;
++
++	/* For compatibility, fill in the remaining chars with spaces. */
++	memset(&label[length], ' ', MSDOS_NAME - length);
++	label[MSDOS_NAME] = '\0';
++
++	if (volume_label_invalid(sb, label))
++		return -EINVAL;
++
++	switch (sbi->fat_bits) {
++	case 16: case 32:
++		break;
++	default:
++		fat_msg(sb, KERN_ERR, "Cannot change volume label for FAT%d",
++			sbi->fat_bits);
++
++		return -EINVAL;
++	}
++
++	err = set_volume_label(sb, label);
++	/* Create if doesn't exist. */
++	if (err == -ENOENT)
++		err = create_volume_label(sb, label);
++	if (err)
++		return err;
++
++	/*
++	 * The volume label is stored in multiple places - the root directory
++	 * region (FAT16) / as an ordinary directory entry in the root directory
++	 * (FAT32) and in both cases, the boot sector. We've updated the
++	 * directory location for both cases, now for the boot sector (+ its
++	 * backup. Eek!)
++	 */
++	set_boot_label(sb, label);
++
++	return 0;
++}
++
+ long fat_generic_ioctl(struct file *filp, unsigned int cmd, unsigned long arg)
+ {
+ 	struct inode *inode = file_inode(filp);
+@@ -132,6 +335,8 @@ long fat_generic_ioctl(struct file *filp, unsigned int cmd, unsigned long arg)
+ 		return fat_ioctl_set_attributes(filp, user_attr);
+ 	case FAT_IOCTL_GET_VOLUME_ID:
+ 		return fat_ioctl_get_volume_id(inode, user_attr);
++	case FAT_IOCTL_SET_VOLUME_LABEL:
++		return fat_ioctl_set_volume_label(inode, (char __user *)arg);
+ 	default:
+ 		return -ENOTTY;	/* Inappropriate ioctl for device */
+ 	}
+diff --git a/include/uapi/linux/msdos_fs.h b/include/uapi/linux/msdos_fs.h
+index e956704..c62dfdf 100644
+--- a/include/uapi/linux/msdos_fs.h
++++ b/include/uapi/linux/msdos_fs.h
+@@ -106,6 +106,7 @@ struct __fat_dirent {
+ #define FAT_IOCTL_SET_ATTRIBUTES	_IOW('r', 0x11, __u32)
+ /*Android kernel has used 0x12, so we use 0x13*/
+ #define FAT_IOCTL_GET_VOLUME_ID		_IOR('r', 0x13, __u32)
++#define FAT_IOCTL_SET_VOLUME_LABEL	_IOW('r', 0x14, char *)
+
+ struct fat_boot_sector {
+ 	__u8	ignored[3];	/* Boot strap short or near jump */
+--
+2.3.7

@@ -1,0 +1,154 @@
+#!/bin/bash
+set -e
+
+SIZE=${SIZE:-50} # MB
+INIT_LABEL=${INIT_LABEL:-ALPHA}
+FIRST_NEW_LABEL=${FIRST_NEW_LABEL:-BETA}
+FINAL_NEW_LABEL=${FINAL_NEW_LABEL:-OMEGA}
+
+# FAT16 has maximum 512 root directory entries, stick with a conversative 500 dirs.
+NUM_DIRS_FAT16=${NUM_DIRS_FAT16:-500}
+# FAT32 can hold arbitrary amounts of entries (presuambly 4bn max?), but given
+# the space available on the device, conversatively go with 3000.
+NUM_DIRS_FAT32=${NUM_DIRS_FAT32:-3000}
+
+fat_type=$1
+
+function fatal()
+{
+	echo do_test.sh: $@ >&2
+	exit 1
+}
+
+function usage()
+{
+	fatal usage: do_test.sh [16 or 32] - 16 runs FAT16 test, 32 runs FAT32 test.
+}
+
+function set_label()
+{
+	if [ ! -z $1 ]; then
+		fatlabel fat.img $1
+	fi
+}
+
+# Prints FAT filesystem image volume label.
+# $1: prefix description, e.g. 'before' or 'after'.
+function print_label()
+{
+	printf "%s: %9s: " FAT$fat_type $1
+	echo $(fatlabel fat.img)
+}
+
+# Attempt unmount of /mnt, ignoring errors.
+function unmount()
+{
+	umount /mnt &>/dev/null || true
+}
+
+function mnt()
+{
+	mount -o loop fat.img /mnt
+}
+
+# Writes a couple of files which very nearly fills the image full of random
+# data. Useful for before/after corruption checks.
+function write_random_data()
+{
+	pushd /mnt >/dev/null
+
+	rm -f random.dat
+
+	# Leave some room for the test directories.
+	dd if=/dev/urandom of=random.dat bs=1M count=$((SIZE - 3)) &>/dev/null
+
+	popd >/dev/null
+}
+
+# Exit /mnt if we're pushd'd there, unmount /mnt, and remove existing random
+# files if they exist.
+function cleanup()
+{
+	if [ "$PWD" = "/mnt" ]; then
+		popd >/dev/null
+	fi
+
+	unmount
+	rm -f random.dat fat.img
+}
+
+function add_dirs()
+{
+	for i in $(seq 1 $NUM_DIRS); do
+		mkdir /mnt/$i
+	done
+}
+
+function check_for_corruption()
+{
+	diff /mnt/random.dat random.dat >/dev/null || fatal random.dat corruption!
+
+	for i in $(seq 1 $NUM_DIRS); do
+		[ ! -d /mnt/$i ] && fatal Directory /$i missing, corruption!
+		true # Otherwise loop fails.
+	done
+}
+
+function run_test()
+{
+	# Set up fat image.
+	rm -f fat.img
+	truncate -s "$SIZE"M fat.img
+	mkfs.fat -F $fat_type fat.img >/dev/null
+
+	# Set initial label if provided.
+	set_label $1
+	print_label before
+
+	# Mount and configure.
+	unmount # Any previously mounted volumes on /mnt.
+	trap cleanup EXIT # Ensure we always unmount.
+	mnt
+	write_random_data
+	cp /mnt/random.dat . # So we can check it after volume label change.
+
+	# Add a large number of directories to the root dir to see whether that
+	# causes issues with our volume dir entries. Runs as a background job to
+	# check for issues with simultaneous directory creation in the root
+	# directory and setting the volume label.
+	add_dirs &
+	add_dirs_pid=$!
+
+	./fatnametest /mnt/random.dat $FIRST_NEW_LABEL
+	# Only running the subdirs corruption once - should be sufficient.
+	wait $add_dirs_pid
+	check_for_corruption
+	unmount
+	print_label "new/1st"
+
+	mnt
+	./fatnametest /mnt/random.dat $FINAL_NEW_LABEL
+	check_for_corruption
+	unmount
+	print_label "new/final"
+}
+
+[ $EUID != 0 ] && fatal must be root
+
+case $fat_type in
+	16)
+		NUM_DIRS=$NUM_DIRS_FAT16
+	;;
+	32)
+		NUM_DIRS=$NUM_DIRS_FAT32
+	;;
+	*)
+		usage
+	;;
+esac
+
+# First - try with no volume label changed.
+run_test
+# Next - set the initial label, and run again.
+echo Now with $INIT_LABEL set beforehand...
+run_test $INIT_LABEL

@@ -1,0 +1,20 @@
+#!/bin/bash
+set -e
+
+# Elevate!
+if [ $EUID != 0 ]; then
+exec sudo -E $0 $@
+	exit $?
+fi
+
+# Build fatnametest.c.
+make fatnametest >/dev/null
+
+echo Testing FAT16...
+./do_test.sh 16
+
+echo
+
+echo Testing FAT32...
+./do_test.sh 32
+echo Done!
