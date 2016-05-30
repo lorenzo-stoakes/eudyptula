@@ -1,5 +1,7 @@
 KERNEL_TREE_PATH?=/lib/modules/$(shell uname -r)/build
 
+EXTRA_CFLAGS = -DDEBUG
+
 obj-m += hello.o
 
 all: hello.ko
